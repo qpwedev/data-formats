@@ -1,0 +1,37 @@
+@startuml Higher Education
+object Person {
+    name
+    date of birth
+}
+object Student {
+}
+object Teacher {
+}
+object Faculty {
+    name [1..*]
+    website url [1..*]
+}
+object University {
+    name [1..*]
+    website url [1..*]
+}
+object Course {
+    name [1..*]
+    code
+    website url [0..*]
+}
+
+Student -> Person
+Teacher -> Person
+
+
+Faculty "0..*" - "1..1" University : part of
+
+Student "0..*" -- "0..*" Course : studies
+Teacher "1..*" -- "0..*" Course : teaches
+
+Faculty "1..*" --- "0..*" Teacher : works at
+Faculty "1..*" --- "0..*" Student : studies at
+
+Course "0..*" - "1..1" Faculty : is taught at
+@enduml
