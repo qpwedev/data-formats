@@ -11,10 +11,9 @@
 @prefix st: <https://example.org/resource/students/> .
 @prefix fa: <https://example.org/resource/faculties/> .
 @prefix co: <https://example.org/resource/courses/> .
-
+@prefix te: <https://example.org/resource/teachers/> .
 
 # ENTITY DEFINITION
-
 # Person, Student, Teacher
 ex:Person a rdfs:Class ;
     rdfs:label "Person"@en ;
@@ -22,7 +21,7 @@ ex:Person a rdfs:Class ;
 ex:personName a rdf:Property ;
     rdfs:label "Full name"@en ;
     rdfs:domain ex:Person ;
-    rdfs:range xsd:Name .
+    rdfs:range xsd:string .
 ex:birthDate a rdf:Property ;
     rdfs:label "Birth date"@en ; 
     rdfs:domain ex:Person ;
@@ -45,7 +44,7 @@ ex:University a rdfs:Class ;
 ex:universityName a rdf:Property ;
     rdfs:label "Name of the university"@en ;
     rdfs:domain ex:University ;
-    rdfs:range xsd:Name .
+    rdfs:range xsd:string .
 ex:universityWebsite a rdf:Property ;
     rdfs:label "Homepage of the university"@en ;
     rdfs:domain ex:University ;
@@ -58,7 +57,7 @@ ex:Faculty a rdfs:Class ;
 ex:facultyName a rdf:Property ;
     rdfs:label "Name of the faculty"@en ;
     rdfs:domain ex:Faculty ;
-    rdfs:range xsd:Name .
+    rdfs:range xsd:string .
 ex:facultyWebsite a rdf:Property ;
     rdfs:label "Homepage of the faculty"@en ;
     rdfs:domain ex:Faculty ;
@@ -71,7 +70,7 @@ ex:Course a rdfs:Class ;
 ex:courseName a rdf:Property ;
     rdfs:label "Name of the course"@en ;
     rdfs:domain ex:Course ;
-    rdfs:range xsd:Name .
+    rdfs:range xsd:string .
 ex:courseCode a rdf:Property ; 
     rdfs:label "Code of the course"@en ;
     rdfs:domain ex:Course ;
@@ -118,17 +117,9 @@ ex:teachesAt a rdf:Property ;
     rdfs:domain ex:Teacher ; 
     rdfs:range ex:Faculty .
 
-# TODO: 
-
-# 1. At least 3 instances of each class. In case of inheritance hierarchies, one of each children is enough.
-# 2. Every attribute used at least once.
-# 3. At least 3 instances of each association.
-
 
 # INSTANCES
-
 # University
-
 un:charlesUniversity a ex:University ;
     ex:universityName "Univerzita Karlova"@cs ,
         "Charles University"@en ;
@@ -146,15 +137,15 @@ un:brnoUniversityOfTechnology a ex:University ;
     ex:universityWebsite <https://www.vut.cz> .
 
 # Student 
-st:kamacech a ex:Student ;
+st:karelMatej a ex:Student ;
     ex:personName "Karel Matej Čech-Chod"@cs ;
-    ex:birthDate "1860-02-21"^^xsd:date .
-st:jodo a ex:Student ;
+    ex:birthDate "2000-02-21"^^xsd:date .
+st:johnDomiesavac a ex:Student ;
     ex:personName "John Domiešavač"@sk ;
     ex:birthDate "1992-04-17"^^xsd:date .
-st:alvy a ex:Student ;
+st:alenaVybusna a ex:Student ;
     ex:personName "Alena Výbušná"@cs ;
-    ex:birthDate "1986-04-26"^^xsd:date .
+    ex:birthDate "2001-04-26"^^xsd:date .
 
 # Faculty
 fa:FJFI a ex:Faculty ;
@@ -172,12 +163,30 @@ fa:FF a ex:Faculty ;
     ex:facultyWebsite <https://www.ff.cuni.cz/> ,
         <https://www.ff.cuni.cz/en> .
 
+fa:FIT a ex:Faculty ;
+    ex:facultyName "Fakulta informačních technologií"@cs ,
+        "Faculty of information technology"@en ;
+    ex:facultyWebsite <https://www.fit.vut.cz/.cs/> ,
+        <https://www.fit.vut.cz/.en/> .
+
 # Teacher
+te:jaroslavMira a ex:Teacher ;
+    ex:personName "Mgr. Jaroslav Ira Ph.D."@cs ;
+    ex:birthDate "1968-08-21"^^xsd:date .
 
+te:marieSkaropova a ex:Teacher ;
+    ex:personName "Mgr. Marie Škaropová PH.D"@cs ;
+    ex:birthDate "1957-09-10"^^xsd:date .
 
+te:jiriHrivnak a ex:Teacher ;
+    ex:personName "doc. Ing. Jiří Hrivnák, Ph.D."@cs ;
+    ex:birthDate "1968-08-20"^^xsd:date .
+
+te:janaStikarova a ex:Teacher ;
+    ex:personName "PhDr. Mgr. Jana Štikarová, Ph.D."@cs ;
+    ex:birthDate "1989-01-9"^^xsd:date .
 
 # Course
-
 co:AHE110018 a ex:course ;
     ex:name "Historický vývoj Evropy v komparativní perspektivě"@cs ,
         "Historical Development of Europe in Comparative Perspective"@en;
@@ -206,3 +215,40 @@ co:15DPLG a ex:course ;
     # PhDr. Mgr. Jana Štikarová, Ph.D.
     #dopravna fakulta
 
+
+# ASSOCIATIONS
+# University - Faculty
+un:charlesUniversity ex:hasFaculty fa:FF .
+un:czechTechnicalUniversity ex:hasFaculty fa:FJFI,
+                                          fa:FD .
+un:brnoUniversityOfTechnology ex:hasFaculty fa:FIT .
+
+# Course - Faculty
+co:AHE110018 ex:taughtAt fa:FF .
+co:ABO600601 ex:taughtAt fa:FF .
+co:02ELMA ex:taughtAt fa:FJFI .
+co:15DPLG ex:taughtAt fa:FD .
+
+# Student - Faculty
+st:karelMatej ex:studiesAt fa:FF .
+st:johnDomiesavac ex:studiesAt fa:FJFI .
+st:alenaVybusna ex:studiesAt fa:FD .
+
+# Student - Course
+st:karelMatej ex:studies co:AHE110018, 
+                         co:ABO600601 .
+st:johnDomiesavac ex:studies co:02ELMA .
+st:alenaVybusna ex:studies co:15DPLG .
+
+# Teacher - Course
+te:jaroslavIra ex:teaches co:AHE110018 .
+te:marieSkaropova ex:teaches co:ABO600601 .
+te:jiriHrivnak ex:teaches co:02ELMA .
+te:janaStikarova ex:teaches co:15DPLG .
+
+
+# Teacher - Faculty
+te:jaroslavIra ex:teachesAt fa:FF .
+te:marieSkaropova ex:teachesAt fa:FF .
+te:jiriHrivnak ex:teachesAt fa:FJFI .
+te:janaStikarova ex:teachesAt  fa:FD.
