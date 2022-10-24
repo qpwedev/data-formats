@@ -1,0 +1,17 @@
+# Custom prefixes
+PREFIX ex: <http://example.org/vocabulary/> 
+PREFIX un: <https://example.org/resource/universities/> 
+PREFIX st: <https://example.org/resource/students/> 
+PREFIX fa: <https://example.org/resource/faculties/> 
+PREFIX co: <https://example.org/resource/courses/> 
+PREFIX te: <https://example.org/resource/teachers/> 
+
+# Select all faculties where there are no courses taught
+SELECT DISTINCT * WHERE {
+	?faculty a ex:Faculty .
+	NOT EXISTS {
+    ?course ex:taughtAt ?faculty . 
+    }
+}
+
+# TODO: 3 queries
