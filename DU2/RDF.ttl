@@ -4,6 +4,8 @@
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/TR/xmlschema11-2/> .
+@prefix frapo: <http://purl.org/cerif/frapo/>.
+@prefix crsw: <http://courseware.rkbexplorer.com/ontologies/courseware/>.
 
 # Custom prefixes
 @prefix ex: <http://example.org/vocabulary/> .
@@ -15,69 +17,48 @@
 
 # ENTITY DEFINITION
 # Person, Student, Teacher
-ex:Person a rdfs:Class ;
-    rdfs:label "Person"@en ;
-    rdfs:comment "Class representing a person"@en .
-ex:personName a rdf:Property ;
-    rdfs:label "Full name"@en ;
-    rdfs:domain ex:Person ;
-    rdfs:range xsd:string .
-ex:birthDate a rdf:Property ;
-    rdfs:label "Birth date"@en ; 
-    rdfs:domain ex:Person ;
-    rdfs:range xsd:date .
-
 ex:Student a rdfs:Class ;
     rdfs:label "Student"@en ; 
     rdfs:comment "Class representing a university student"@en ;
-    rdfs:subClassOf ex:Person .
+    rdfs:subClassOf foaf:Person .
 
 ex:Teacher a rdfs:Class ;
     rdfs:label "Teacher"@en ; 
     rdfs:comment "Class representing a university teacher"@en ;
-    rdfs:subClassOf ex:Person .
+    rdfs:subClassOf foaf:Person .
 
 # University
-ex:University a rdfs:Class ;
-    rdfs:label "University"@en ;
-    rdfs:comment "Class representing a university"@en .
 ex:universityName a rdf:Property ;
     rdfs:label "Name of the university"@en ;
-    rdfs:domain ex:University ;
+    rdfs:domain frapo:University ;
     rdfs:range xsd:string .
 ex:universityWebsite a rdf:Property ;
     rdfs:label "Homepage of the university"@en ;
-    rdfs:domain ex:University ;
+    rdfs:domain frapo:University ;
     rdfs:range foaf:Document .
 
 # Faculty
-ex:Faculty a rdfs:Class ; 
-    rdfs:label "Faculty"@en ;
-    rdfs:comment "Class representing a faculty of an university"@en .
 ex:facultyName a rdf:Property ;
     rdfs:label "Name of the faculty"@en ;
-    rdfs:domain ex:Faculty ;
+    rdfs:domain frapo:Faculty ;
     rdfs:range xsd:string .
 ex:facultyWebsite a rdf:Property ;
     rdfs:label "Homepage of the faculty"@en ;
-    rdfs:domain ex:Faculty ;
+    rdfs:domain frapo:Faculty ;
     rdfs:range foaf:Document .
 
 # Course
-ex:Course a rdfs:Class ;
-    rdfs:label "Course" ;
-    rdfs:comment "Class representing a course/subject".
 ex:courseName a rdf:Property ;
     rdfs:label "Name of the course"@en ;
-    rdfs:domain ex:Course ;
+    rdfs:domain crsw:Course ;
     rdfs:range xsd:string .
 ex:courseCode a rdf:Property ; 
     rdfs:label "Code of the course"@en ;
-    rdfs:domain ex:Course ;
+    rdfs:domain crsw:Course ;
     rdfs:range xsd:string .
 ex:courseWebsite a rdf:Property ;
     rdfs:label "Homepage of the course"@en ;
-    rdfs:domain ex:Course ;
+    rdfs:domain crsw:Course ;
     rdfs:range foaf:Document .
 
 # RELACTIONS
@@ -90,7 +71,7 @@ ex:hasFaculty a rdf:Property ;
 # Course - Faculty
 ex:taughtAt a rdf:Property ;
     rdfs:label "Course is taught at the faculty"@en ;
-    rdfs:domain ex:Course ;
+    rdfs:domain crsw:Course ;
     rdfs:range ex:Faculty .
 
 # Student - Faculty
@@ -103,13 +84,13 @@ ex:studiesAt a rdf:Property ;
 ex:studies a rdf:Property ;
     rdfs:label "Student studies the course"@en ;
     rdfs:domain ex:Student ;
-    rdfs:range ex:Course .
+    rdfs:range crsw:Course .
 
 # Teacher - Course
 ex:teaches a rdf:Property ;
     rdfs:label "Teacher teaches the course"@en ;
     rdfs:domain ex:Teacher ;
-    rdfs:range ex:Course .
+    rdfs:range crsw:Course .
 
 # Teacher - Faculty
 ex:teachesAt a rdf:Property ;
@@ -138,14 +119,14 @@ un:brnoUniversityOfTechnology a ex:University ;
 
 # Student 
 st:karelMatej a ex:Student ;
-    ex:personName "Karel Matej Čech-Chod"@cs ;
-    ex:birthDate "2000-02-21"^^xsd:date .
+    foaf:name "Karel Matej Čech-Chod"@cs ;
+    frapo:hasBirthDate "2000-02-21"^^xsd:date .
 st:johnDomiesavac a ex:Student ;
-    ex:personName "John Domiešavač"@sk ;
-    ex:birthDate "1992-04-17"^^xsd:date .
+    foaf:name "John Domiešavač"@sk ;
+    frapo:hasBirthDate "1992-04-17"^^xsd:date .
 st:alenaVybusna a ex:Student ;
-    ex:personName "Alena Výbušná"@cs ;
-    ex:birthDate "2001-04-26"^^xsd:date .
+    foaf:name "Alena Výbušná"@cs ;
+    frapo:hasBirthDate "2001-04-26"^^xsd:date .
 
 # Faculty
 fa:FJFI a ex:Faculty ;
@@ -171,46 +152,46 @@ fa:FIT a ex:Faculty ;
 
 # Teacher
 te:jaroslavMira a ex:Teacher ;
-    ex:personName "Mgr. Jaroslav Ira Ph.D."@cs ;
-    ex:birthDate "1968-08-21"^^xsd:date .
+    foaf:name "Mgr. Jaroslav Ira Ph.D."@cs ;
+    frapo:hasBirthDate "1968-08-21"^^xsd:date .
 
 te:marieSkaropova a ex:Teacher ;
-    ex:personName "Mgr. Marie Škaropová PH.D"@cs ;
-    ex:birthDate "1957-09-10"^^xsd:date .
+    foaf:name "Mgr. Marie Škaropová PH.D"@cs ;
+    frapo:hasBirthDate "1957-09-10"^^xsd:date .
 
 te:jiriHrivnak a ex:Teacher ;
-    ex:personName "doc. Ing. Jiří Hrivnák, Ph.D."@cs ;
-    ex:birthDate "1968-08-20"^^xsd:date .
+    foaf:name "doc. Ing. Jiří Hrivnák, Ph.D."@cs ;
+    frapo:hasBirthDate "1968-08-20"^^xsd:date .
 
 te:janaStikarova a ex:Teacher ;
-    ex:personName "PhDr. Mgr. Jana Štikarová, Ph.D."@cs ;
-    ex:birthDate "1989-01-9"^^xsd:date .
+    foaf:name "PhDr. Mgr. Jana Štikarová, Ph.D."@cs ;
+    frapo:hasBirthDate "1989-01-9"^^xsd:date .
 
 # Course
-co:AHE110018 a ex:course ;
-    ex:name "Historický vývoj Evropy v komparativní perspektivě"@cs ,
+co:AHE110018 a crsw:Course ;
+    ex:courseName "Historický vývoj Evropy v komparativní perspektivě"@cs ,
         "Historical Development of Europe in Comparative Perspective"@en;
-    ex:code "AHE110018" ;
+    ex:courseCode "AHE110018" ;
     ex:courseWebsite <https://is.cuni.cz/studium/predmety/index.php?id=ea629e3e972f695ebb7e4383e410feda&tid=&do=predmet&kod=AHE110018> .
     #Mgr. Jaroslav Ira Ph.D.
     # filozoficka fakulta
-co:ABO600601 a ex:course ;
-    ex:name "Starší česká literatura – přednáška"@cs ,
+co:ABO600601 a crsw:Course ;
+    ex:courseName "Starší česká literatura – přednáška"@cs ,
         "Czech Literature of Older Times – Lecture"@en;
-    ex:code "ABO600601" ;
+    ex:courseCode "ABO600601" ;
     ex:courseWebsite <https://is.cuni.cz/studium/predmety/index.php?id=ea629e3e972f695ebb7e4383e410feda&tid=&do=predmet&kod=ABO600601> .
     # Mgr. Marie Škaropová PH.D
     #filozoficka fakulta
-co:02ELMA a ex:course ;
-    ex:name "Elektřina a magnetismus"@cs ;
-    ex:code "02ELMA" ;
+co:02ELMA a crsw:Course ;
+    ex:courseName "Elektřina a magnetismus"@cs ;
+    ex:courseCode "02ELMA" ;
     ex:courseWebsite <https://bilakniha.cvut.cz/cs/predmet11279205.html#gsc.tab=0> . 
     # doc. Ing. Jiří Hrivnák, Ph.D.
     # prof. Ing. Goce Chadzitaskos, CSc.
     #Fakulta jaderná a fyzikálně inženýrská
-co:15DPLG a ex:course ;
-    ex:name "Dopravní psychologie"@cs ;
-    ex:code "15DPLG" ;
+co:15DPLG a crsw:Course ;
+    ex:courseName "Dopravní psychologie"@cs ;
+    ex:courseCode "15DPLG" ;
     ex:courseWebsite <https://www.fd.cvut.cz/studenti/predmet-detail.html?kod=615DPLG> . 
     # PhDr. Mgr. Jana Štikarová, Ph.D.
     #dopravna fakulta
