@@ -1,3 +1,4 @@
+PREFIX fr: <https://w3id.org/fr/def/core#>
 PREFIX fo: <http://www.w3.org/1999/XSL/Format#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -14,7 +15,8 @@ PREFIX ex: <http://example.org/vocabulary/>
 
 # Select all faculties where there are no courses taught
 SELECT DISTINCT * WHERE {
-	?faculty a ex:Faculty ;
+	?faculty a frapo:Faculty ;
   		ex:facultyName ?facultyName .
 	FILTER NOT EXISTS { ?course ex:taughtAt ?faculty . }
+    FILTER (langMatches(lang(?facultyName),"cs"))
 }
