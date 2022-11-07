@@ -96,18 +96,18 @@ ex:teachesAt a rdf:Property ;
 
 # INSTANCES
 # University
-ex:charlesUniversity a ex:University ;
+ex:charlesUniversity a frapo:University ;
     ex:universityName "Univerzita Karlova"@cs ,
         "Charles University"@en ;
     ex:universityWebsite <https://www.cuni.cz> ,
         <https://www.cuni.cz/uken-1.html> .
 
-ex:czechTechnicalUniversity a ex:University ;
+ex:czechTechnicalUniversity a frapo:University ;
     ex:universityName "České vysoké učení technické v Praze"@cs ,
         "Czech Technical University in Prague"@en ;
     ex:universityWebsite <https://www.cvut.cz> .
 
-ex:brnoUniversityOfTechnology a ex:University ;
+ex:brnoUniversityOfTechnology a frapo:University ;
     ex:universityName "Vysoké učení technické v Brně"@cs ,
         "Brno University of Technology"@en ;
     ex:universityWebsite <https://www.vut.cz> .
@@ -133,22 +133,22 @@ ex:josefUridil a ex:Student ;
     frapo:hasBirthDate "1985-11-19"^^xsd:data .
 
 # Faculty
-ex:FJFI a ex:Faculty ;
+ex:FJFI a frapo:Faculty ;
     ex:facultyName "Fakulta jaderná a fyzikálně inženýrská"@cs ,
         "Faculty of Nuclear Sciences and Physical Engineering"@en ;
     ex:facultyWebsite <https://www.fjfi.cvut.cz/cz/> ,
         <https://www.fjfi.cvut.cz/en/> .
-ex:FD a ex:Faculty ;
+ex:FD a frapo:Faculty ;
     ex:facultyName "Fakulta dopravní"@cs ,
         "Faculty of Transportation Sciences"@en ;
     ex:facultyWebsite <https://www.fjfi.cvut.cz/cz/> .
-ex:FF a ex:Faculty ;
+ex:FF a frapo:Faculty ;
     ex:facultyName "Filozofická fakulta"@cs ,
         "Faculty of Arts"@en ;
     ex:facultyWebsite <https://www.ff.cuni.cz/> ,
         <https://www.ff.cuni.cz/en> .
 
-ex:FIT a ex:Faculty ;
+ex:FIT a frapo:Faculty ;
     ex:facultyName "Fakulta informačních technologií"@cs ,
         "Faculty of information technology"@en ;
     ex:facultyWebsite <https://www.fit.vut.cz/.cs/> ,
