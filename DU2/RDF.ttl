@@ -231,12 +231,12 @@ ex:petrKopecky ex:studies ex:ABO600601 .
 ex:diaLiskova ex:studies ex:AHE110018 .
 ex:josefUridil ex:studies ex:15DPLG ,
                           ex:AHE110018 .
+
 # Teacher - Course
 ex:jaroslavIra ex:teaches ex:AHE110018 .
 ex:marieSkaropova ex:teaches ex:ABO600601 .
 ex:jiriHrivnak ex:teaches ex:02ELMA .
 ex:janaStikarova ex:teaches ex:15DPLG .
-
 
 # Teacher - Faculty
 ex:jaroslavIra ex:teachesAt ex:FF .
