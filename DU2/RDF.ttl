@@ -9,11 +9,6 @@
 
 # Custom prefixes
 @prefix ex: <http://example.org/vocabulary/> .
-@prefix un: <https://example.org/resource/universities/> .
-@prefix st: <https://example.org/resource/students/> .
-@prefix fa: <https://example.org/resource/faculties/> .
-@prefix co: <https://example.org/resource/courses/> .
-@prefix te: <https://example.org/resource/teachers/> .
 
 # ENTITY DEFINITION
 # Person, Student, Teacher
