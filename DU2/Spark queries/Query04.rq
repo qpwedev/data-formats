@@ -1,0 +1,24 @@
+PREFIX fr: <https://w3id.org/fr/def/core#>
+PREFIX fo: <http://www.w3.org/1999/XSL/Format#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/TR/xmlschema11-2/>
+PREFIX frapo: <http://purl.org/cerif/frapo/>
+PREFIX crsw: <http://courseware.rkbexplorer.com/ontologies/courseware/>
+
+# Custom prefixes
+PREFIX ex: <http://example.org/vocabulary/>
+
+# Number of subjects taught at each university over all of it's faculties
+SELECT ?university (COUNT(DISTINCT ?subject) AS ?numberOfSubject) WHERE {
+  ?university a frapo:University ;
+  OPTIONAL {	
+    ?university ex:hasFaculty ?faculty .
+  	?subject ex:taughtAt ?faculty .
+  }
+}
+GROUP BY ?university
