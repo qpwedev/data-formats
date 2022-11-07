@@ -1,0 +1,24 @@
+PREFIX fo: <http://www.w3.org/1999/XSL/Format#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/TR/xmlschema11-2/>
+PREFIX frapo: <http://purl.org/cerif/frapo/>
+PREFIX crsw: <http://courseware.rkbexplorer.com/ontologies/courseware/>
+
+# Custom prefixes
+PREFIX ex: <http://example.org/vocabulary/>
+
+# Dvojice studentů, kteří studují stejný předmět a jméno daného předmětu
+SELECT ?studentName1 ?studentName2 ?subjectname WHERE {
+  ?student1 ex:studies ?subject .
+  ?student2 ex:studies ?subject .
+  ?student1 foaf:name ?studentName1 .
+  ?student2 foaf:name ?studentName2 .
+  ?subject ex:courseName ?subjectname .
+  FILTER(?student1 != ?student2)
+  FILTER (langMatches(lang(?subjectname),"cs"))
+}
