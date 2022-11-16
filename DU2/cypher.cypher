@@ -10,13 +10,15 @@ CREATE (ff:Faculty {name: "Filozofická fakulta", website: "https://www.ff.cuni.
 CREATE (fit:Faculty {name: "Fakulta informačních technologií", website: "https://www.fit.vut.cz/.cs/"})
 
 //Students
-CREATE (km:Student {name: "Karel Matej Čech-Chod", bithDay: date("1860-02-21")})
-CREATE (jd:Student {name: "John Domiešavač", bithDay: date("1992-04-17")})
-CREATE (av:Student {name: "Alena Výbušná", bithDay: date("1986-04-26")})
-CREATE (pk:Student {name: "Petr Kopecký", bithDay: date("1969-04-20")})
-CREATE (dl:Student {name: "Dia Líšková", bithDay: date("2000-05-27")})
-CREATE (ju:Student {name: "Josef Uřídil", bithDay: date("1985-11-19")})
-CREATE (os:Student {name: "Olke Rene Syba", birthDay: date("1899-9-19")})
+
+CREATE (km:Student {name: "Karel Matej Čech-Chod", birthday: date("1860-02-21")})
+CREATE (jd:Student {name: "John Domiešavač", birthday: date("1992-04-17")})
+CREATE (av:Student {name: "Alena Výbušná", birthday: date("1986-04-26")})
+CREATE (pk:Student {name: "Petr Kopecký", birthday: date("1969-04-20")})
+CREATE (dl:Student {name: "Dia Líšková", birthday: date("2000-05-27")})
+CREATE (ju:Student {name: "Josef Uřídil", birthday: date("1985-11-19")})
+CREATE (os:Student {name: "Olke Rene Syba", birthday: date("1899-9-19")})
+
 //Teachers
 CREATE (jm:Teacher {name: "Mgr. Jaroslav Mira Ph.D.", birthday: date("1968-08-21")})
 CREATE (ms:Teacher {name: "Mgr. Marie Škaropová Ph.D.", birthday: date("1957-09-10")})
