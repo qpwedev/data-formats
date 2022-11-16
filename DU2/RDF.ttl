@@ -141,7 +141,7 @@ ex:FJFI a frapo:Faculty ;
 ex:FD a frapo:Faculty ;
     ex:facultyName "Fakulta dopravní"@cs ,
         "Faculty of Transportation Sciences"@en ;
-    ex:facultyWebsite <https://www.fjfi.cvut.cz/cz/> .
+    ex:facultyWebsite <https://www.fd.cvut.cz/cz/> .
 ex:FF a frapo:Faculty ;
     ex:facultyName "Filozofická fakulta"@cs ,
         "Faculty of Arts"@en ;
