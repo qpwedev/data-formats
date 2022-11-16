@@ -133,7 +133,7 @@ ex:josefUridil a ex:Student ;
     frapo:hasBirthDate "1985-11-19"^^xsd:date .
 ex:olkeSyba a ex:Student ;
     foaf:name "Olke Rene Syba"@en ;
-    frapo:hasBirthDate "1899-9-19" ^^xsd:date .
+    frapo:hasBirthDate "1899-09-19"^^xsd:date .
 
 # Faculty
 ex:FJFI a frapo:Faculty ;
