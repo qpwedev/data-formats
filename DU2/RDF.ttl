@@ -156,19 +156,19 @@ ex:FIT a frapo:Faculty ;
 
 # Teacher
 ex:jaroslavMira a ex:Teacher ;
-    foaf:name "Mgr. Jaroslav Ira Ph.D."@cs ;
+    foaf:name "Mgr. Jaroslav Mira Ph.D."@cs ;
     frapo:hasBirthDate "1968-08-21"^^xsd:date .
 
 ex:marieSkaropova a ex:Teacher ;
-    foaf:name "Mgr. Marie Škaropová PH.D"@cs ;
+    foaf:name "Mgr. Marie Škaropová Ph.D."@cs ;
     frapo:hasBirthDate "1957-09-10"^^xsd:date .
 
 ex:jiriHrivnak a ex:Teacher ;
-    foaf:name "doc. Ing. Jiří Hrivnák, Ph.D."@cs ;
+    foaf:name "doc. Ing. Jiří Hrivnák Ph.D."@cs ;
     frapo:hasBirthDate "1968-08-20"^^xsd:date .
 
 ex:janaStikarova a ex:Teacher ;
-    foaf:name "PhDr. Mgr. Jana Štikarová, Ph.D."@cs ;
+    foaf:name "PhDr. Mgr. Jana Štikarová Ph.D."@cs ;
     frapo:hasBirthDate "1989-01-9"^^xsd:date .
 
 # Course
