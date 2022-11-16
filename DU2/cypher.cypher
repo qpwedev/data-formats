@@ -7,8 +7,8 @@ CREATE (vut:University {name: "Vysoké učení technické v Brně", website:"htt
 
 CREATE (fjfi:Faculty {name: "Fakulta jaderná a fyzikálně inženýrská", website: "https://www.fjfi.cvut.cz/cz/"})
 CREATE (fd:Faculty {name: "Fakulta dopravní", website: "https://www.fd.cvut.cz/cz/"})
-CREATE (ff:Faculty {name: "Filozofická fakulta", website: "https://www.ff.cuni.cz/cz/"})
-
+CREATE (ff:Faculty {name: "Filozofická fakulta", website: "https://www.ff.cuni.cz/"})
+CREATE (fit:Faculty {name: "Filozofická fakulta", website: "https://www.ff.cuni.cz/"})
 
 
 
