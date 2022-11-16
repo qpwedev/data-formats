@@ -115,13 +115,13 @@ ex:brnoUniversityOfTechnology a frapo:University ;
 # Student 
 ex:karelMatej a ex:Student ;
     foaf:name "Karel Matej Čech-Chod"@cs ;
-    frapo:hasBirthDate "2000-02-21"^^xsd:date .
+    frapo:hasBirthDate "1860-02-21"^^xsd:date .
 ex:johnDomiesavac a ex:Student ;
     foaf:name "John Domiešavač"@sk ;
     frapo:hasBirthDate "1992-04-17"^^xsd:date .
 ex:alenaVybusna a ex:Student ;
     foaf:name "Alena Výbušná"@cs ;
-    frapo:hasBirthDate "2001-04-26"^^xsd:date .
+    frapo:hasBirthDate "1986-04-26"^^xsd:date .
 ex:petrKopecky a ex:Student ;
     foaf:name "Petr Kopecký"@cs ;
     frapo:hasBirthDate "1969-04-20"^^xsd:date .
@@ -177,11 +177,11 @@ ex:AHE110018 a crsw:Course ;
         "Historical Development of Europe in Comparative Perspective"@en;
     ex:courseCode "AHE110018" ;
     ex:courseWebsite <https://is.cuni.cz/studium/predmety/index.php?id=ea629e3e972f695ebb7e4383e410feda&tid=&do=predmet&kod=AHE110018> .
-    #Mgr. Jaroslav Ira Ph.D.
+    #Mgr. Jaroslav Mira Ph.D.
     # filozoficka fakulta
 ex:ABO600601 a crsw:Course ;
-    ex:courseName "Starší česká literatura – přednáška"@cs ,
-        "Czech Literature of Older Times – Lecture"@en;
+    ex:courseName "Starší česká literatura - přednáška"@cs ,
+        "Czech Literature of Older Times - Lecture"@en;
     ex:courseCode "ABO600601" ;
     ex:courseWebsite <https://is.cuni.cz/studium/predmety/index.php?id=ea629e3e972f695ebb7e4383e410feda&tid=&do=predmet&kod=ABO600601> .
     # Mgr. Marie Škaropová PH.D
@@ -225,21 +225,21 @@ ex:josefUridil ex:studiesAt ex:FD .
 # Student - Course
 ex:karelMatej ex:studies ex:AHE110018, 
                          ex:ABO600601 .
-ex:johnDomiesavac ex:studies ex:02ELMA .
-ex:alenaVybusna ex:studies ex:15DPLG .
+ex:johnDomiesavac ex:studies ex:15DPLG .
+ex:alenaVybusna ex:studies ex:02ELMA .
 ex:petrKopecky ex:studies ex:ABO600601 .
 ex:diaLiskova ex:studies ex:AHE110018 .
 ex:josefUridil ex:studies ex:15DPLG ,
                           ex:AHE110018 .
 
 # Teacher - Course
-ex:jaroslavIra ex:teaches ex:AHE110018 .
+ex:jaroslavMira ex:teaches ex:AHE110018 .
 ex:marieSkaropova ex:teaches ex:ABO600601 .
 ex:jiriHrivnak ex:teaches ex:02ELMA .
 ex:janaStikarova ex:teaches ex:15DPLG .
 
 # Teacher - Faculty
-ex:jaroslavIra ex:teachesAt ex:FF .
+ex:jaroslavMira ex:teachesAt ex:FF .
 ex:marieSkaropova ex:teachesAt ex:FF .
 ex:jiriHrivnak ex:teachesAt ex:FJFI .
 ex:janaStikarova ex:teachesAt  ex:FD.
