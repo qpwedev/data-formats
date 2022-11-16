@@ -16,7 +16,7 @@ CREATE (av:Student {name: "Alena Výbušná", bithDay: date("1986-04-26")})
 CREATE (pk:Student {name: "Petr Kopecký", bithDay: date("1969-04-20")})
 CREATE (dl:Student {name: "Dia Líšková", bithDay: date("2000-05-27")})
 CREATE (ju:Student {name: "Josef Uřídil", bithDay: date("1985-11-19")})
-
+CREATE (os:Student {name: "Olke Rene Syba", birthDay: date("1899-9-19")})
 //Teachers
 CREATE (jm:Teacher {name: "Mgr. Jaroslav Mira Ph.D.", birthday: date("1968-08-21")})
 CREATE (ms:Teacher {name: "Mgr. Marie Škaropová Ph.D.", birthday: date("1957-09-10")})
@@ -52,7 +52,8 @@ CREATE
 (av)-[:STUDIES_AT]->(fjfi),
 (pk)-[:STUDIES_AT]->(ff),
 (dl)-[:STUDIES_AT]->(ff),
-(ju)-[:STUDIES_AT]->(fd)
+(ju)-[:STUDIES_AT]->(fd),
+(os)-[:STUDIES_AT]->(fit)
 
 //Student - Course
 CREATE
