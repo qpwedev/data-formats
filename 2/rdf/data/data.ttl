@@ -219,8 +219,8 @@ ex:15DPLG ex:taughtAt ex:FD .
 
 # Student - Faculty
 ex:karelMatej ex:studiesAt ex:FF .
-ex:johnDomiesavac ex:studiesAt ex:FJFI .
-ex:alenaVybusna ex:studiesAt ex:FD .
+ex:johnDomiesavac ex:studiesAt ex:FD .
+ex:alenaVybusna ex:studiesAt ex:FJFI .
 ex:petrKopecky ex:studiesAt ex:FF .
 ex:diaLiskova ex:studiesAt ex:FF .
 ex:josefUridil ex:studiesAt ex:FD .
