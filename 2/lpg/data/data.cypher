@@ -17,13 +17,13 @@ CREATE (av:Student {name: "Alena Výbušná", birthday: date("1986-04-26")})
 CREATE (pk:Student {name: "Petr Kopecký", birthday: date("1969-04-20")})
 CREATE (dl:Student {name: "Dia Líšková", birthday: date("2000-05-27")})
 CREATE (ju:Student {name: "Josef Uřídil", birthday: date("1985-11-19")})
-CREATE (os:Student {name: "Olke Rene Syba", birthday: date("1899-9-19")})
+CREATE (os:Student {name: "Olke Rene Syba", birthday: date("1899-09-19")})
 
 //Teachers
 CREATE (jm:Teacher {name: "Mgr. Jaroslav Mira Ph.D.", birthday: date("1968-08-21")})
 CREATE (ms:Teacher {name: "Mgr. Marie Škaropová Ph.D.", birthday: date("1957-09-10")})
 CREATE (jh:Teacher {name: "doc. Ing. Jiří Hrivnák Ph.D.", birthday: date("1968-08-20")})
-CREATE (js:Teacher {name: "PhDr. Mgr. Jana Štikarová Ph.D.", birthday: date("1989-01-9")})
+CREATE (js:Teacher {name: "PhDr. Mgr. Jana Štikarová Ph.D.", birthday: date("1989-01-09")})
 
 //Courses
 CREATE (ahe110018:Course {name: "Historický vývoj Evropy v komparativní perspektivě", code: "AHE110018", website: "https://is.cuni.cz/studium/predmety/index.php?id=ea629e3e972f695ebb7e4383e410feda&tid=&do=predmet&kod=AHE110018"})
@@ -35,49 +35,49 @@ CREATE (dplg15:Course {name: "Dopravní psychologie", code: "15DPLG", website: "
 //ASSOCIATIONS
 //Uni -> faculty
 CREATE 
-(cuni)-[:HAS_FACULTY]->(ff),
-(cvut)-[:HAS_FACULTY]->(fd),
-(cvut)-[:HAS_FACULTY]->(fjfi),
-(vut)-[:HAS_FACULTY]->(fit)
+(cuni)-[:HAS_FACULTY {since: date("1348-04-07")}]->(ff),
+(cvut)-[:HAS_FACULTY {since: date("1952-09-01")}]->(fd),
+(cvut)-[:HAS_FACULTY {since: date("1955-08-25")}]->(fjfi),
+(vut)-[:HAS_FACULTY {since: date("2002-01-01")}]->(fit)
 
 //Course - Faculty
 CREATE
-(ahe110018)-[:TAUGHT_AT]->(ff),
-(abo600601)-[:TAUGHT_AT]->(ff),
-(elma02)-[:TAUGHT_AT]->(fjfi),
-(dplg15)-[:TAUGHT_AT]->(fd)
+(ahe110018)-[:TAUGHT_AT {since: date("2008-08-14")}]->(ff),
+(abo600601)-[:TAUGHT_AT {since: date("1984-06-19")}]->(ff),
+(elma02)-[:TAUGHT_AT {since: date("1955-08-26")}]->(fjfi),
+(dplg15)-[:TAUGHT_AT {since: date("1968-09-11")}]->(fd)
 
 //Student - Faculty
 CREATE
-(km)-[:STUDIES_AT]->(ff),
-(jd)-[:STUDIES_AT]->(fd),
-(av)-[:STUDIES_AT]->(fjfi),
-(pk)-[:STUDIES_AT]->(ff),
-(dl)-[:STUDIES_AT]->(ff),
-(ju)-[:STUDIES_AT]->(fd),
-(os)-[:STUDIES_AT]->(fit)
+(km)-[:STUDIES_AT {since: date("1879-09-28")}]->(ff),
+(jd)-[:STUDIES_AT {since: date("2011-10-01")}]->(fd),
+(av)-[:STUDIES_AT {since: date("2006-09-01")}]->(fjfi),
+(pk)-[:STUDIES_AT {since: date("1988-09-28")}]->(ff),
+(dl)-[:STUDIES_AT {since: date("2020-09-28")}]->(ff),
+(ju)-[:STUDIES_AT {since: date("2004-10-01")}]->(fd),
+(os)-[:STUDIES_AT {since: date("1900-09-11")}]->(fit)
 
 //Student - Course
 CREATE
-(km)-[:STUDIES]->(ahe110018),
-(km)-[:STUDIES]->(abo600601),
-(jd)-[:STUDIES]->(dplg15),
-(av)-[:STUDIES]->(elma02),
-(pk)-[:STUDIES]->(abo600601),
-(dl)-[:STUDIES]->(ahe110018),
-(ju)-[:STUDIES]->(dplg15),
-(ju)-[:STUDIES]->(ahe110018)
+(km)-[:STUDIES {since: date("1879-09-28")}]->(ahe110018),
+(km)-[:STUDIES {since: date("1880-09-28")}]->(abo600601),
+(jd)-[:STUDIES {since: date("2012-10-01")}]->(dplg15),
+(av)-[:STUDIES {since: date("2007-09-01")}]->(elma02),
+(pk)-[:STUDIES {since: date("1988-09-28")}]->(abo600601),
+(dl)-[:STUDIES {since: date("2022-09-28")}]->(ahe110018),
+(ju)-[:STUDIES {since: date("2005-10-01")}]->(dplg15),
+(ju)-[:STUDIES {since: date("2006-09-28")}]->(ahe110018)
 
 //Teacher - Course
 CREATE
-(jm)-[:TEACHES]->(ahe110018),
-(ms)-[:TEACHES]->(abo600601),
-(jh)-[:TEACHES]->(elma02),
-(js)-[:TEACHES]->(dplg15)
+(jm)-[:TEACHES {since: date("2008-08-14")}]->(ahe110018),
+(ms)-[:TEACHES {since: date("1984-06-19")}]->(abo600601),
+(jh)-[:TEACHES {since: date("1955-08-26")}]->(elma02),
+(js)-[:TEACHES {since: date("1968-09-11")}]->(dplg15)
 
 //Teacher - Faculty
 CREATE
-(jm)-[:TEACHES_AT]->(ff),
-(ms)-[:TEACHES_AT]->(ff),
-(jh)-[:TEACHES_AT]->(fjfi),
-(js)-[:TEACHES_AT]->(fd)
+(jm)-[:TEACHES_AT {since: date("2002-08-09")}]->(ff),
+(ms)-[:TEACHES_AT {since: date("1978-09-23")}]->(ff),
+(jh)-[:TEACHES_AT {since: date("1950-08-24")}]->(fjfi),
+(js)-[:TEACHES_AT {since: date("1962-09-15")}]->(fd)
