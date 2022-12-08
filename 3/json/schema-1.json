@@ -1,0 +1,92 @@
+{
+    "$schema" : "https://json-schema.org/draft/2020-12/schema",
+    "$id" : "http://example.org/data.shema.json",
+    "type" : "array",
+    "items": {
+        "type" : {
+            "title" : "University",                                                                                                                                                                          
+            "type" : "object",
+            "properties" : {
+                "universityName" : {
+                    "type" : "string"
+                },
+                "universityWebsite" : {
+                    "type" : "string",
+                    "format" : "uri"
+                },
+                "Faculties" : {
+                    "type" : "array",
+                    "items" : {
+                        "type" : {
+                            "title" : "Faculty",
+                            "type" : "object",
+                            "properties" : {
+                                "facultyName" : {
+                                    "type" : "string"
+                                },
+                                "facultyWebsite" : {
+                                    "type" : "string",
+                                    "format" : "uri" 
+                                },
+                                "Courses" : {
+                                    "type" : "array",
+                                    "items" : {
+                                        "title" : "Course",
+                                        "type" : "object",
+                                        "properties" : {
+                                            "courseName" : {
+                                                "type" : "string"
+                                            },
+                                            "courseCode" : {
+                                                "type" : "string"
+                                            },
+                                            "courseWebsite" : {
+                                                "type" : "string",
+                                                "format" : "uri"
+                                            },
+                                            "Students" : {
+                                                "type" : "array",
+                                                "items" : {
+                                                    "type" : {
+                                                        "$ref" :  "http://example.org/student.shema.json" 
+                                                    }
+                                                }
+                                            },
+                                            "Teachers" : {
+                                                "type" : "array",
+                                                "items" : {
+                                                    "type" : { 
+                                                        "$ref" : "http://example.org/teacher.shema.json"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    
+                                },
+                                "Students" : {
+                                    "type" : "array",
+                                    "items" : {
+                                        "type" : {
+                                            "$ref" :  "http://example.org/student.shema.json" 
+                                        }
+                                    
+                                    }
+                                },
+                                "Teachers" : {
+                                    "type" : "array",
+                                    "items" : {
+                                        "type" : { 
+                                            "$ref" : "http://example.org/teacher.shema.json"
+                                        }
+                                    }
+                                }
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
