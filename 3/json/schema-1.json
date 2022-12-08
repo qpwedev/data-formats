@@ -50,7 +50,8 @@
                                                     "type" : {
                                                         "$ref" :  "http://example.org/student.shema.json" 
                                                     }
-                                                }
+                                                },
+                                                "minItems" : 0
                                             },
                                             "Teachers" : {
                                                 "type" : "array",
@@ -58,11 +59,12 @@
                                                     "type" : { 
                                                         "$ref" : "http://example.org/teacher.shema.json"
                                                     }
-                                                }
+                                                },
+                                                "minItems" : 1
                                             }
                                         }
-                                    }
-                                    
+                                    },
+                                    "minItems" : 0 
                                 },
                                 "Students" : {
                                     "type" : "array",
@@ -71,7 +73,8 @@
                                             "$ref" :  "http://example.org/student.shema.json" 
                                         }
                                     
-                                    }
+                                    },
+                                    "minItems" : 0
                                 },
                                 "Teachers" : {
                                     "type" : "array",
@@ -79,12 +82,14 @@
                                         "type" : { 
                                             "$ref" : "http://example.org/teacher.shema.json"
                                         }
-                                    }
+                                    },
+                                    "minItems" : 0
                                 }
                                 
                             }
                         }
-                    }
+                    },
+                    "minItems" : 0
                 }
             }
         }
