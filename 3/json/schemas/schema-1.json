@@ -1,0 +1,146 @@
+{
+    "$schema" : "https://json-schema.org/draft/2020-12/schema",
+    "$id" : "http://example.org/data.shema.json",
+    "type" : "array",
+    "items": { "type" : { "$ref" : "#/$defs/University" } },
+    "$defs" : {
+        "University" : {
+            "title" : "University",                                                                                                                                                                          
+            "type" : "object",
+            "required" : ["universityName", "universityWebsite", "Faculties"],
+            "properties" : {
+                "universityName" : {
+                    "type" : {"$ref" : "#/$defs/langName"}
+                },
+                "universityWebsite" : {
+                    "type" : "array",
+                    "items" : {
+                        "type" : "string",
+                        "format" : "uri"
+                    },
+                    "minItems" : 1
+                },
+                "Faculties" : {
+                    "type" : "array",
+                    "items" : { "type" : { "$ref" : "#/$defs/Faculty"} },
+                    "minItems" : 0
+                }
+            }
+        },
+        "Faculty" : {
+            "title" : "Faculty",
+            "type" : "object",
+            "required" : ["facultyName", "facultyWebsite", "Courses", "Students", "Teachers"],
+            "properties" : {
+                "facultyName" : {
+                    "type" : {"$ref" : "#/$defs/langName"}
+                },
+                "facultyWebsite" : {
+                    "type" : "array",
+                    "items" : {
+                        "type" : "string",
+                        "format" : "uri" 
+                    },
+                    "minItems" : 1
+                },
+                "Courses" : {
+                    "type" : "array",
+                    "items" : { "type" : { "$ref" : "#/$defs/Course" } },
+                    "minItems" : 0 
+                },
+                "Students" : {
+                    "type" : "array",
+                    "items" : {"type" : { "$ref" :  "#/$defs/Student" } },
+                    "minItems" : 0
+                },
+                "Teachers" : {
+                    "type" : "array",
+                    "items" : { "type" : { "$ref" : "#/$defs/Teacher" } },
+                    "minItems" : 0
+                }
+                
+            }
+        },
+        "Course" : {
+            "title" : "Course",
+            "type" : "object",
+            "required" : ["courseName", "courseCode", "courseWebsite", "Students", "Teachers"],
+            "properties" : {
+                "courseName" : {
+                    "type" : {"$ref" : "#/$defs/langName"}
+                },
+                "courseCode" : {
+                    "type" : "string"
+                },
+                "courseWebsite" : {
+                    "type" : "array",
+                    "items" : {
+                        "type" : "string",
+                        "format" : "uri"
+                    },
+                    "minItems" : 0
+                },
+                "Students" : {
+                    "type" : "array",
+                    "items" : { "type" : { "$ref" :  "#/$defs/Student" } },
+                    "minItems" : 0
+                },
+                "Teachers" : {
+                    "type" : "array",
+                    "items" : { "type" : { "$ref" : "#/$defs/Teacher" } },
+                    "minItems" : 1
+                }
+            }
+        },
+        "Student" : {
+            "title" : "Student",
+            "type" : "object",
+            "required" : ["name", "hasBirthDate"], 
+            "properties": {
+                "name" : {
+                    "type" : {"$ref" : "#/$defs/langName"}
+                },
+                "hasBirthDate" : {
+                    "type" : "string",
+                    "format" : "date"
+                }
+            }
+        },
+        "Teacher" : {
+            "title" : "Teacher",
+            "type" : "object",
+            "required" : ["name", "hasBirthDate"], 
+            "properties": {
+                "name" : {
+                    "type" : {"$ref" : "#/$defs/langName"}
+                },
+                "hasBirthDate" : {
+                    "type" : "string",
+                    "format" : "date"
+                }
+            }
+        },
+        "langNname" : {
+            "title" : "Language Name",
+            "type" : "object",
+            "properties" : {
+                "en" : {
+                    "type" : "array",
+                    "items" : { "type" : "string" },
+                    "minItems" : 0
+                },
+                "sk" : {
+                    "type" : "array",
+                    "items" : { "type" : "string" },
+                    "minItems" : 0
+                },
+                "cs" : {
+                    "type" : "array",
+                    "items" : { "type" : "string" },
+                    "minItems" : 0
+                }
+            }
+        }
+        
+    }
+}
