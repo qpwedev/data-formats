@@ -118,4 +118,12 @@ elementFormDefault="qualified">
         </xs:sequence>
     </xs:complexType>
 </xs:element>
+
+<xs:element name="universities">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="tns:university" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
 </xs:schema>
