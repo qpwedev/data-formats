@@ -1,230 +1,230 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <u:universities xmlns:u="http://example.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema-1.xsd">
-    <u:university>
+    <u:university id="charlesUniversity">
         <u:names>
-            <u:name xml:lang="en-EN">Charles University</u:name>
-            <u:name xml:lang="cs-CZ">Karlova univerzita</u:name>
+            <u:name xml:lang="en">Charles University</u:name>
+            <u:name xml:lang="cs">Karlova univerzita</u:name>
         </u:names>
         <u:websites>
             <u:website>http://www.cuni.cz</u:website>
             <u:website>https://www.cuni.cz/uken-1.html</u:website>
         </u:websites>
         <u:faculties>
-            <u:faculty>
+            <u:faculty id="FF">
                 <u:names>
-                    <u:name xml:lang="en-EN">Faculty of Arts</u:name>
-                    <u:name xml:lang="cs-CZ">Filozofická fakulta</u:name>
+                    <u:name xml:lang="en">Faculty of Arts</u:name>
+                    <u:name xml:lang="cs">Filozofická fakulta</u:name>
                 </u:names>
                 <u:websites>
                     <u:website>http://www.ff.cuni.cz</u:website>
                     <u:website>https://www.ff.cuni.cz/en</u:website>
                 </u:websites>
                 <u:courses>
-                    <u:course>
+                    <u:course id="AHE110018">
                         <u:names>
-                            <u:name xml:lang="en-EN">Historical Development of Europe in Comparative Perspective</u:name>
-                            <u:name xml:lang="cs-CZ">Historický vývoj Evropy v komparativní perspektivě</u:name>
+                            <u:name xml:lang="en">Historical Development of Europe in Comparative Perspective</u:name>
+                            <u:name xml:lang="cs">Historický vývoj Evropy v komparativní perspektivě</u:name>
                         </u:names>
                         <u:code>AHE110018</u:code>
                         <u:websites>
                             <u:website>https://is.cuni.cz/studium/predmety/index.php?id=ea629e3e972f695ebb7e4383e410feda&amp;tid=&amp;do=predmet&amp;kod=AHE110018</u:website>
                         </u:websites>
                         <u:students>
-                            <u:student>
-                                <u:name>Karel Matej Čech-Chod</u:name>
+                            <u:student id="karelMatej" >
+                                <u:name xml:lang="cs">Karel Matej Čech-Chod</u:name>
                                 <u:birthday>1860-02-21</u:birthday>
                             </u:student>
-                            <u:student>
-                                <u:name>Dia Líšková</u:name>
+                            <u:student id="diaLiskova">
+                                <u:name xml:lang="sk">Dia Líšková</u:name>
                                 <u:birthday>2000-05-27</u:birthday>
                             </u:student>
-                            <u:student>
-                                <u:name>Josef Uřídil</u:name>
+                            <u:student id="josefUridil">
+                                <u:name xml:lang="cs">Josef Uřídil</u:name>
                                 <u:birthday>1985-11-19</u:birthday>
                             </u:student>
                         </u:students>
                         <u:teachers>
-                            <u:teacher>
-                                <u:name>Mgr. Jaroslav Mira Ph.D.</u:name>
+                            <u:teacher id="jaroslavMira">
+                                <u:name xml:lang="cs">Mgr. Jaroslav Mira Ph.D.</u:name>
                                 <u:birthday>1968-08-21</u:birthday>
                             </u:teacher>
                         </u:teachers>
                     </u:course>
-                    <u:course>
+                    <u:course id="ABO600601">
                         <u:names>
-                            <u:name xml:lang="en-EN">Czech Literature of Older Times - Lecture</u:name>
-                            <u:name xml:lang="cs-CZ">Starší česká literatura - přednáška</u:name>
+                            <u:name xml:lang="en">Czech Literature of Older Times - Lecture</u:name>
+                            <u:name xml:lang="cs">Starší česká literatura - přednáška</u:name>
                         </u:names>
                         <u:code>ABO600601</u:code>
                         <u:websites>
                             <u:website>https://is.cuni.cz/studium/predmety/index.php?id=ea629e3e972f695ebb7e4383e410feda&amp;tid=&amp;do=predmet&amp;kod=ABO600601</u:website>
                         </u:websites>
                         <u:students>
-                            <u:student>
-                                <u:name>Karel Matej Čech-Chod</u:name>
+                            <u:student id="karelMatej">
+                                <u:name xml:lang="cs">Karel Matej Čech-Chod</u:name>
                                 <u:birthday>1860-02-21</u:birthday>
                             </u:student>
-                            <u:student>
-                                <u:name>Petr Kopecký</u:name>
+                            <u:student id="petrKopecky">
+                                <u:name xml:lang="cs">Petr Kopecký</u:name>
                                 <u:birthday>1969-04-20</u:birthday>
                             </u:student>
                         </u:students>
                         <u:teachers>
-                            <u:teacher>
-                                <u:name>Mgr. Marie Škaropová Ph.D.</u:name>
+                            <u:teacher id="marieSkaropova">
+                                <u:name xml:lang="cs">Mgr. Marie Škaropová Ph.D.</u:name>
                                 <u:birthday>1957-09-10</u:birthday>
                             </u:teacher>
                         </u:teachers>
                     </u:course>
                 </u:courses>
                 <u:students>
-                    <u:student>
-                        <u:name>Karel Matej Čech-Chod</u:name>
+                    <u:student id="karelMatej">
+                        <u:name xml:lang="cs">Karel Matej Čech-Chod</u:name>
                         <u:birthday>1860-02-21</u:birthday>
                     </u:student>
-                    <u:student>
-                        <u:name>Dia Líšková</u:name>
+                    <u:student id="diaLiskova">
+                        <u:name xml:lang="sk">Dia Líšková</u:name>
                         <u:birthday>2000-05-27</u:birthday>
                     </u:student>
-                    <u:student>
-                        <u:name>Petr Kopecký</u:name>
+                    <u:student id="petrKopecky">
+                        <u:name xml:lang="cs">Petr Kopecký</u:name>
                         <u:birthday>1969-04-20</u:birthday>
                     </u:student>
                 </u:students>
                 <u:teachers>
-                    <u:teacher>
-                        <u:name>Mgr. Marie Škaropová Ph.D.</u:name>
+                    <u:teacher id="marieSkaropova">
+                        <u:name xml:lang="cs">Mgr. Marie Škaropová Ph.D.</u:name>
                         <u:birthday>1957-09-10</u:birthday>
                     </u:teacher>
-                    <u:teacher>
-                        <u:name>Mgr. Jaroslav Mira Ph.D.</u:name>
+                    <u:teacher id="jaroslavMira">
+                        <u:name xml:lang="cs">Mgr. Jaroslav Mira Ph.D.</u:name>
                         <u:birthday>1968-08-21</u:birthday>
                     </u:teacher>
                 </u:teachers>
             </u:faculty>
         </u:faculties>
     </u:university>
-    <u:university>
+    <u:university id="czechTechnicalUniversity">
         <u:names>
-            <u:name xml:lang="en-EN">Czech Technical University in Prague</u:name>
-            <u:name xml:lang="cs-CZ">České vysoké učení technické v Praze</u:name>
+            <u:name xml:lang="en">Czech Technical University in Prague</u:name>
+            <u:name xml:lang="cs">České vysoké učení technické v Praze</u:name>
         </u:names>
         <u:websites>
             <u:website>https://www.cvut.cz</u:website>
         </u:websites>
         <u:faculties>
-            <u:faculty>
+            <u:faculty id="FJFI">
                 <u:names>
-                    <u:name xml:lang="en-EN">Faculty of Nuclear Sciences and Physical Engineering</u:name>
-                    <u:name xml:lang="cs-CZ">Fakulta jaderná a fyzikálně inženýrská</u:name>
+                    <u:name xml:lang="en">Faculty of Nuclear Sciences and Physical Engineering</u:name>
+                    <u:name xml:lang="cs">Fakulta jaderná a fyzikálně inženýrská</u:name>
                 </u:names>
                 <u:websites>
                     <u:website>https://www.fjfi.cvut.cz/cz/</u:website>
                     <u:website>https://www.fjfi.cvut.cz/en/</u:website>
                 </u:websites>
                 <u:courses>
-                    <u:course>
+                    <u:course id="02ELMA">
                         <u:names>
-                            <u:name xml:lang="cs-CZ">Elektřina a magnetismus</u:name>
+                            <u:name xml:lang="cs">Elektřina a magnetismus</u:name>
                         </u:names>
                         <u:code>02ELMA</u:code>
                         <u:websites>
                             <u:website>https://bilakniha.cvut.cz/cs/predmet11279205.html#gsc.tab=0</u:website>
                         </u:websites>
                         <u:students>
-                            <u:student>
-                                <u:name>Alena Výbušná</u:name>
+                            <u:student id="alenaVybusna">
+                                <u:name xml:lang="cs">Alena Výbušná</u:name>
                                 <u:birthday>1986-04-26</u:birthday>
                             </u:student>
                         </u:students>
                         <u:teachers>
-                            <u:teacher>
-                                <u:name>doc. Ing. Jiří Hrivnák Ph.D.</u:name>
+                            <u:teacher id="jiriHrivnak">
+                                <u:name xml:lang="cs">doc. Ing. Jiří Hrivnák Ph.D.</u:name>
                                 <u:birthday>1968-08-20</u:birthday>
                             </u:teacher>
                         </u:teachers>
                     </u:course>
                 </u:courses>
                 <u:students>
-                    <u:student>
-                        <u:name>Alena Výbušná</u:name>
+                    <u:student id="alenaVybusna">
+                        <u:name xml:lang="cs">Alena Výbušná</u:name>
                         <u:birthday>1986-04-26</u:birthday>
                     </u:student>
                 </u:students>
                 <u:teachers>
-                    <u:teacher>
-                        <u:name>doc. Ing. Jiří Hrivnák Ph.D.</u:name>
+                    <u:teacher id="jiriHrivnak">
+                        <u:name xml:lang="cs">doc. Ing. Jiří Hrivnák Ph.D.</u:name>
                         <u:birthday>1968-08-20</u:birthday>
                     </u:teacher>
                 </u:teachers>
             </u:faculty>
-            <u:faculty>
+            <u:faculty id="FD">
                 <u:names>
-                    <u:name xml:lang="en-EN">Faculty of Transportation Sciences</u:name>
-                    <u:name xml:lang="cs-CZ">Fakulta dopravní</u:name>
+                    <u:name xml:lang="en">Faculty of Transportation Sciences</u:name>
+                    <u:name xml:lang="cs">Fakulta dopravní</u:name>
                 </u:names>
                 <u:websites>
                     <u:website>https://www.fd.cvut.cz/cz/</u:website>
                 </u:websites>
                 <u:courses>
-                    <u:course>
+                    <u:course id="15DPLG">
                         <u:names>
-                            <u:name xml:lang="cs-CZ">Dopravní psychologie</u:name>
+                            <u:name xml:lang="cs">Dopravní psychologie</u:name>
                         </u:names>
                         <u:code>15DPLG</u:code>
                         <u:websites>
                             <u:website>https://www.fd.cvut.cz/studenti/predmet-detail.html?kod=615DPLG</u:website>
                         </u:websites>
                         <u:students>
-                            <u:student>
-                                <u:name>John Domiešavač</u:name>
+                            <u:student id="johnDomiesavac">
+                                <u:name xml:lang="sk">John Domiešavač</u:name>
                                 <u:birthday>1992-04-17</u:birthday>
                             </u:student>
-                            <u:student>
-                                <u:name>Josef Uřídil</u:name>
+                            <u:student id="josefUridil">
+                                <u:name xml:lang="cs">Josef Uřídil</u:name>
                                 <u:birthday>1985-11-19</u:birthday>
                             </u:student>
                         </u:students>
                         <u:teachers>
-                            <u:teacher>
-                                <u:name>PhDr. Mgr. Jana Štikarová Ph.D.</u:name>
+                            <u:teacher id="janaStikarova">
+                                <u:name xml:lang="cs">PhDr. Mgr. Jana Štikarová Ph.D.</u:name>
                                 <u:birthday>1989-01-09</u:birthday>
                             </u:teacher>
                         </u:teachers>
                     </u:course>
                 </u:courses>
                 <u:students>
-                    <u:student>
-                        <u:name>John Domiešavač</u:name>
+                    <u:student id="johnDomiesavac">
+                        <u:name xml:lang="sk">John Domiešavač</u:name>
                         <u:birthday>1992-04-17</u:birthday>
                     </u:student>
-                    <u:student>
-                        <u:name>Josef Uřídil</u:name>
+                    <u:student id="josefUridil">
+                        <u:name xml:lang="cs">Josef Uřídil</u:name>
                         <u:birthday>1985-11-19</u:birthday>
                     </u:student>
                 </u:students>
                 <u:teachers>
-                    <u:teacher>
-                        <u:name>PhDr. Mgr. Jana Štikarová Ph.D.</u:name>
+                    <u:teacher id="janaStikarova">
+                        <u:name xml:lang="cs">PhDr. Mgr. Jana Štikarová Ph.D.</u:name>
                         <u:birthday>1989-01-09</u:birthday>
                     </u:teacher>
                 </u:teachers>
             </u:faculty>
         </u:faculties>
     </u:university>
-    <u:university>
+    <u:university id="brnoUniversityOfTechnology">
         <u:names>
-            <u:name xml:lang="en-EN">Brno University of Technology</u:name>
-            <u:name xml:lang="cs-CZ">Vysoké učení technické v Brně</u:name>
+            <u:name xml:lang="en">Brno University of Technology</u:name>
+            <u:name xml:lang="cs">Vysoké učení technické v Brně</u:name>
         </u:names>
         <u:websites>
             <u:website>https://www.vut.cz</u:website>
         </u:websites>
         <u:faculties>
-            <u:faculty>
+            <u:faculty id="FIT">
                 <u:names>
-                    <u:name xml:lang="en-EN">Faculty of information technology</u:name>
-                    <u:name xml:lang="cs-CZ">Fakulta informačních technologií</u:name>
+                    <u:name xml:lang="en">Faculty of information technology</u:name>
+                    <u:name xml:lang="cs">Fakulta informačních technologií</u:name>
                 </u:names>
                 <u:websites>
                     <u:website>https://www.fit.vut.cz/</u:website>
@@ -232,8 +232,8 @@
                 </u:websites>
                 <u:courses />
                 <u:students>
-                    <u:student>
-                        <u:name>Olke Rene Syba</u:name>
+                    <u:student id="olkeSyba">
+                        <u:name xml:lang="en">Olke Rene Syba</u:name>
                         <u:birthday>1899-09-19</u:birthday>
                     </u:student>
                 </u:students>
