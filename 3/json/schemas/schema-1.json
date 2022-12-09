@@ -1,16 +1,22 @@
 {
     "$schema" : "https://json-schema.org/draft/2020-12/schema",
     "$id" : "http://example.org/data.shema.json",
-    "type" : "array",
-    "items": { "type" : { "$ref" : "#/$defs/University" } },
+    "type" : "object",
+    "required": ["universities"],
+    "properties": {
+        "universities" : { 
+            "type" : "array",
+            "items": { "$ref" : "#/$defs/University"  }
+        }   
+    },
     "$defs" : {
         "University" : {
             "title" : "University",                                                                                                                                                                          
             "type" : "object",
-            "required" : ["universityName", "universityWebsite", "Faculties"],
+            "required" : ["universityName", "universityWebsite", "hasFaculty"],
             "properties" : {
                 "universityName" : {
-                    "type" : {"$ref" : "#/$defs/langName"}
+                    "$ref" : "#/$defs/langName"
                 },
                 "universityWebsite" : {
                     "type" : "array",
@@ -20,9 +26,9 @@
                     },
                     "minItems" : 1
                 },
-                "Faculties" : {
+                "hasFaculty" : {
                     "type" : "array",
-                    "items" : { "type" : { "$ref" : "#/$defs/Faculty"} },
+                    "items" : { "$ref" : "#/$defs/Faculty" },
                     "minItems" : 0
                 }
             }
@@ -30,10 +36,10 @@
         "Faculty" : {
             "title" : "Faculty",
             "type" : "object",
-            "required" : ["facultyName", "facultyWebsite", "Courses", "Students", "Teachers"],
+            "required" : ["facultyName", "facultyWebsite", "offers", "isVisitedBy", "employs"],
             "properties" : {
                 "facultyName" : {
-                    "type" : {"$ref" : "#/$defs/langName"}
+                    "$ref" : "#/$defs/langName"
                 },
                 "facultyWebsite" : {
                     "type" : "array",
@@ -43,19 +49,19 @@
                     },
                     "minItems" : 1
                 },
-                "Courses" : {
+                "offers" : {
                     "type" : "array",
-                    "items" : { "type" : { "$ref" : "#/$defs/Course" } },
+                    "items" : { "$ref" : "#/$defs/Course" },
                     "minItems" : 0 
                 },
-                "Students" : {
+                "isVisitedBy" : {
                     "type" : "array",
-                    "items" : {"type" : { "$ref" :  "#/$defs/Student" } },
+                    "items" : { "$ref" :  "#/$defs/Student" },
                     "minItems" : 0
                 },
-                "Teachers" : {
+                "employs" : {
                     "type" : "array",
-                    "items" : { "type" : { "$ref" : "#/$defs/Teacher" } },
+                    "items" : { "$ref" : "#/$defs/Teacher" },
                     "minItems" : 0
                 }
                 
@@ -64,10 +70,10 @@
         "Course" : {
             "title" : "Course",
             "type" : "object",
-            "required" : ["courseName", "courseCode", "courseWebsite", "Students", "Teachers"],
+            "required" : ["courseName", "courseCode", "courseWebsite", "isStudiedBy", "isTaughtBy"],
             "properties" : {
                 "courseName" : {
-                    "type" : {"$ref" : "#/$defs/langName"}
+                    "$ref" : "#/$defs/langName"
                 },
                 "courseCode" : {
                     "type" : "string"
@@ -80,14 +86,14 @@
                     },
                     "minItems" : 0
                 },
-                "Students" : {
+                "isStudiedBy" : {
                     "type" : "array",
-                    "items" : { "type" : { "$ref" :  "#/$defs/Student" } },
+                    "items" : { "$ref" :  "#/$defs/Student" },
                     "minItems" : 0
                 },
-                "Teachers" : {
+                "isTaughtBy" : {
                     "type" : "array",
-                    "items" : { "type" : { "$ref" : "#/$defs/Teacher" } },
+                    "items" : { "$ref" : "#/$defs/Teacher" },
                     "minItems" : 1
                 }
             }
@@ -98,7 +104,7 @@
             "required" : ["name", "hasBirthDate"], 
             "properties": {
                 "name" : {
-                    "type" : {"$ref" : "#/$defs/langName"}
+                    "$ref" : "#/$defs/langName"
                 },
                 "hasBirthDate" : {
                     "type" : "string",
@@ -112,7 +118,7 @@
             "required" : ["name", "hasBirthDate"], 
             "properties": {
                 "name" : {
-                    "type" : {"$ref" : "#/$defs/langName"}
+                    "$ref" : "#/$defs/langName"
                 },
                 "hasBirthDate" : {
                     "type" : "string",
@@ -120,7 +126,7 @@
                 }
             }
         },
-        "langNname" : {
+        "langName" : {
             "title" : "Language Name",
             "type" : "object",
             "properties" : {
