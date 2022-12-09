@@ -1,0 +1,365 @@
+{
+    "@context" : {
+        "foaf" : "http://xmlns.com/foaf/0.1/",
+        "rdf" :  "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd" : "http://www.w3.org/TR/xmlschema11-2/",
+        "frapo" : "http://purl.org/cerif/frapo/",
+        "crsw" : "http://courseware.rkbexplorer.com/ontologies/courseware/",
+        "ex" : "http://example.org/vocabulary/",
+
+        "universityName" : "es:universityName",
+        "universityWebsite" : "es:universityWebsite",
+
+        "facultyName" : "ex:facultyName",
+        "facultyWebsite" : "ex:facultyWebsite",
+
+
+        "courseName" : "ex:courseName",
+        "courseCode" : "ex:courseCode",
+        "courseWebsite" : "ex:courseWebsite",
+
+        "name" : { "@id" : "foaf:name", "@container" : "@language" },
+        "hasBirthDate" : "frapo:hasBirthDate",
+
+
+        "hasFaculty" : "ex:hasFaculty",
+        "offers" : { "@reverse" : "ex:taughtAt" },
+        "isVisitedBy" : { "@reverse" : "ex:studiesAt"},
+        "isStudiedBy" : { "@reverse" : "ex:studies"},
+        "isTaughtBy" : { "@reverse" : "ex:teaches"},
+        "employs" : { "@reverse" : "ex:teachesAt"}
+    },
+    "universities" : [
+        {
+            "@id" : "ex:charlesUniversity",
+            "@type" : "frapo:University",
+            "universityName" : {
+                "cs" : ["Univerzita Karlova"],
+                "en" : ["Charles University"]
+            },
+            "universityWebsite" : ["https://www.cuni.cz", "https://www.cuni.cz/uken-1.html"],
+            "hasFaculty" : [
+                {
+                    "@id" : "ex:FF",
+                    "@type" : "frapo:Faculty",
+                    "facultyName" : {
+                        "cs" : ["Filozofická fakulta"],
+                        "en" : ["Faculty of Arts"]
+                    },
+                    "facultyWebsite" : ["https://www.ff.cuni.cz/", "https://www.ff.cuni.cz/en"],
+                    "offers" : [
+                        {
+                            "@id" : "ex:AHE110018",
+                            "@type" : "Course",
+                            "courseName" : {
+                                "cs" : ["Historický vývoj Evropy v komparativní perspektivě"],
+                                "en" : ["Historical Development of Europe in Comparative Perspective"]
+                            },
+                            "courseCode" : "AHE110018",
+                            "courseWebsite" : ["https://is.cuni.cz/studium/predmety/index.php?id=ea629e3e972f695ebb7e4383e410feda&tid=&do=predmet&kod=AHE110018"],
+                            "isStudiedBy" : [
+                                {
+                                    "@id" : "ex:karelMatej",
+                                    "@type" : "Student",
+                                    "name" : {
+                                        "cs" : ["Karel Matej Čech-Chod"]
+                                    },
+                                    "hasBirthDate" : "1860-02-21"
+                                },
+                                {
+                                    "@id" : "ex:diaLiskova",
+                                    "@type" : "Student",
+                                    "name" : {
+                                        "cs" : ["Dia Líšková"]
+                                    },
+                                    "hasBirthDate" : "2000-05-27"
+                                },
+                                {
+                                    "@id" : "ex:josefUridil",
+                                    "@type" : "Student",
+                                    "name" : {
+                                        "cs" : ["Josef Uřídil"]
+                                    },
+                                    "hasBirthDate" : "1985-11-19"
+                                }
+                            ],
+                            "isTaughtBy" : [
+                                {
+                                    "@id" : "ex:jaroslavMira",
+                                    "@type" : "Teacher",
+                                    "name" : {
+                                        "cs" : ["Mgr. Jaroslav Mira Ph.D."]
+                                    },
+                                    "hasBirthDate" : "1968-08-21"
+                                }
+                            ]
+                        },
+                        {
+                            "@id" : "ex:ABO600601",
+                            "@type" : "Course",
+                            "courseName" : {
+                                "cs" : ["Starší česká literatura - přednáška"],
+                                "en" : ["Czech Literature of Older Times - Lecture"]
+                            },
+                            "courseCode" : "ABO600601",
+                            "courseWebsite" : ["https://is.cuni.cz/studium/predmety/index.php?id=ea629e3e972f695ebb7e4383e410feda&tid=&do=predmet&kod=ABO600601"],
+                            "isStudiedBy" : [
+                                {
+                                    "@id" : "ex:karelMatej",
+                                    "@type" : "Student",
+                                    "name" : {
+                                        "cs" : ["Karel Matej Čech-Chod"]
+                                    },
+                                    "hasBirthDate" : "1860-02-21"
+                                },
+                                {
+                                    "@id" : "ex:petrKopecky",
+                                    "@type" : "Student",
+                                    "name" : {
+                                        "cs" : ["Petr Kopecký"]
+                                    },
+                                    "hasBirthDate" : "1969-04-20"
+                                }
+                            ],
+                            "isTaughtBy" : [
+                                {
+                                    "@id" : "ex:marieSkaropova",
+                                    "@type" : "Teacher",
+                                    "name" : {
+                                        "cs" : ["Mgr. Marie Škaropová Ph.D."]
+                                    },
+                                    "hasBirthDate" : "1957-09-10"
+                                }
+                            ]
+                        }
+                    ],
+                    "isVisitedBy" : [
+                        {
+                            "@id" : "ex:karelMatej",
+                            "@type" : "Student",
+                            "name" : {
+                                "cs" : ["Karel Matej Čech-Chod"]
+                            },
+                            "hasBirthDate" : "1860-02-21"
+                        },
+                        {
+                            "@id" : "ex:petrKopecky",
+                            "@type" : "Student",
+                            "name" : {
+                                "cs" : ["Petr Kopecký"]
+                            },
+                            "hasBirthDate" : "1969-04-20"
+                        },
+                        {
+                            "@id" : "ex:diaLiskova",
+                            "@type" : "Student",
+                            "name" : {
+                                "cs" : ["Dia Líšková"]
+                            },
+                            "hasBirthDate" : "2000-05-27"
+                        }
+                    ],
+                    "employs" : [
+                        {
+                            "@id" : "ex:jaroslavMira",
+                            "@type" : "Teacher",
+                            "name" : {
+                                "cs" : ["Mgr. Jaroslav Mira Ph.D."]
+                            },
+                            "hasBirthDate" : "1968-08-21"
+                        },
+                        {
+                            "@id" : "ex:marieSkaropova",
+                            "@type" : "Teacher",
+                            "name" : {
+                                "cs" : ["Mgr. Marie Škaropová Ph.D."]
+                            },
+                            "hasBirthDate" : "1957-09-10"
+                        }
+                    ]
+                }
+            ]            
+        },
+        {
+            "@id" : "ex:czechTechnicalUniversity",
+            "@type" : "frapo:University",
+            "universityName" : {
+                "cs" : ["České vysoké učení technické v Praze"],
+                "en" : ["Czech Technical University in Prague"]
+            },
+            "universityWebsite" : ["https://www.cvut.cz"],
+            "hasFaculty" : [
+                {
+                    "@id" : "ex:FJFI",
+                    "@type" : "frapo:Faculty",
+                    "facultyName" : {
+                        "cs" : ["Fakulta jaderná a fyzikálně inženýrská"],
+                        "en" : ["Faculty of Nuclear Sciences and Physical Engineering"]
+                    },
+                    "facultyWebsite" : ["https://www.fjfi.cvut.cz/cz/", "https://www.fjfi.cvut.cz/en/"],
+                    "offers" : [
+                        {
+                            "@id" : "ex:02ELMA",
+                            "@type" : "Course",
+                            "courseName" : {
+                                "cs" : ["Elektřina a magnetismus"]
+                            },
+                            "courseCode" : "02ELMA",
+                            "courseWebsite" : ["https://bilakniha.cvut.cz/cs/predmet11279205.html#gsc.tab=0"],
+                            "isStudiedBy" : [
+                                {
+                                    "@id" : "ex:alenaVybusna",
+                                    "@type" : "Student",
+                                    "name" : {
+                                        "cs" : ["Alena Výbušná"]
+                                    },
+                                    "hasBirthDate" : "1986-04-26"
+                                }
+                            ],
+                            "isTaughtBy" : [
+                                {
+                                    "@id" : "ex:jiriHrivnak",
+                                    "@type" : "Teacher",
+                                    "name" : {
+                                        "cs" : ["doc. Ing. Jiří Hrivnák Ph.D."]
+                                    },
+                                    "hasBirthDate" : "1968-08-20"
+                                }
+                            ]
+                        }
+                    ],
+                    "isVisitedBy" : [
+                        {
+                            "@id" : "ex:alenaVybusna",
+                            "@type" : "Student",
+                            "name" : {
+                                "cs" : ["Alena Výbušná"]
+                            },
+                            "hasBirthDate" : "1986-04-26"
+                        }
+                    ],
+                    "employs" : [
+                        {
+                            "@id" : "ex:jiriHrivnak",
+                            "@type" : "Teacher",
+                            "name" : {
+                                "cs" : ["doc. Ing. Jiří Hrivnák Ph.D."]
+                            },
+                            "hasBirthDate" : "1968-08-20"
+                        }
+                    ]
+                },
+                {
+                    "@id" : "ex:FD",
+                    "@type" : "frapo:Faculty",
+                    "facultyName" : {
+                        "cs" : ["Fakulta dopravní"],
+                        "en" : ["Faculty of Transportation Sciences"]
+                    },
+                    "facultyWebsite" : ["https://www.fd.cvut.cz/cz/"],
+                    "offers" : [
+                        {
+                            "@id" : "ex:15DPLG",
+                            "@type" : "Course",
+                            "courseName" : {
+                                "cs" : ["Dopravní psychologie"]
+                            },
+                            "courseCode" : "15DPLG",
+                            "courseWebsite" : ["https://www.fd.cvut.cz/studenti/predmet-detail.html?kod=615DPLG"],
+                            "isStudiedBy" : [
+                                {
+                                    "@id" : "ex:johnDomiesavac",
+                                    "@type" : "Student",
+                                    "name" : {
+                                        "sk" : ["John Domiešavač"]
+                                    },
+                                    "hasBirthDate" : "1992-04-17"
+                                },
+                                {
+                                    "@id" : "ex:josefUridil",
+                                    "@type" : "Student",
+                                    "name" : {
+                                        "cs" : ["Josef Uřídil"]
+                                    },
+                                    "hasBirthDate" : "1985-11-19"
+                                }
+                            ],
+                            "isTaughtBy" : [
+                                {
+                                    "@id" : "ex:janaStikarova",
+                                    "@type" : "Teacher",
+                                    "name" : {
+                                        "cs" : ["PhDr. Mgr. Jana Štikarová Ph.D."]
+                                    },
+                                    "hasBirthDate" : "1989-01-09"
+                                }
+                            ]
+                        }
+                    ],
+                    "isVisitedBy" : [
+                        {
+                            "@id" : "ex:johnDomiesavac",
+                            "@type" : "Student",
+                            "name" : {
+                                "sk" : ["John Domiešavač"]
+                            },
+                            "hasBirthDate" : "1992-04-17"
+                        },
+                        {
+                            "@id" : "ex:josefUridil",
+                            "@type" : "Student",
+                            "name" : {
+                                "cs" : ["Josef Uřídil"]
+                            },
+                            "hasBirthDate" : "1985-11-19"
+                        }
+                    ],
+                    "employs" : [
+                        {
+                            "@id" : "ex:janaStikarova",
+                            "@type" : "Teacher",
+                            "name" : {
+                                "cs" : ["PhDr. Mgr. Jana Štikarová Ph.D."]
+                            },
+                            "hasBirthDate" : "1989-01-09"
+                        }
+                    ]
+                }
+            ]    
+        },
+        {
+            "@id" : "ex:brnoUniversityOfTechnology",
+            "@type" : "frapo:University",
+            "universityName" : {
+                "cs" : ["Vysoké učení technické v Brně"],
+                "en" : ["Brno University of Technology"]
+            },
+            "universityWebsite" : ["https://www.vut.cz"],
+            "hasFaculty" : [
+                {
+                    "@id" : "ex:FIT",
+                    "@type" : "frapo:Faculty",
+                    "facultyName" : {
+                        "cs" : ["Fakulta informačních technologií"],
+                        "en" : ["Faculty of information technology"]
+                    },
+                    "facultyWebsite" : ["https://www.fit.vut.cz/.cs/", "https://www.fit.vut.cz/.en/"],
+                    "offers" : [],
+                    "isVisitedBy" : [
+                        {
+                            "@id" : "ex:olkeSyba",
+                            "@type" : "Student",
+                            "name" : {
+                                "en" : ["Olke Rene Syba"]
+                            },
+                            "hasBirthDate" : "1899-09-19"
+                        }
+                    ],
+                    "employs" : []
+                }
+            ]    
+        }
+    ]
+
+}
