@@ -2,20 +2,24 @@
 <http://example.org/vocabulary/02ELMA> <http://example.org/vocabulary/courseName> "Elektřina a magnetismus"@cs .
 <http://example.org/vocabulary/02ELMA> <http://example.org/vocabulary/courseWebsite> "https://bilakniha.cvut.cz/cs/predmet11279205.html#gsc.tab=0" .
 <http://example.org/vocabulary/02ELMA> <http://example.org/vocabulary/taughtAt> <http://example.org/vocabulary/FJFI> .
+<http://example.org/vocabulary/02ELMA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Course> .
 <http://example.org/vocabulary/15DPLG> <http://example.org/vocabulary/courseCode> "15DPLG" .
 <http://example.org/vocabulary/15DPLG> <http://example.org/vocabulary/courseName> "Dopravní psychologie"@cs .
 <http://example.org/vocabulary/15DPLG> <http://example.org/vocabulary/courseWebsite> "https://www.fd.cvut.cz/studenti/predmet-detail.html?kod=615DPLG" .
 <http://example.org/vocabulary/15DPLG> <http://example.org/vocabulary/taughtAt> <http://example.org/vocabulary/FD> .
+<http://example.org/vocabulary/15DPLG> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Course> .
 <http://example.org/vocabulary/ABO600601> <http://example.org/vocabulary/courseCode> "ABO600601" .
 <http://example.org/vocabulary/ABO600601> <http://example.org/vocabulary/courseName> "Czech Literature of Older Times - Lecture"@en .
 <http://example.org/vocabulary/ABO600601> <http://example.org/vocabulary/courseName> "Starší česká literatura - přednáška"@cs .
 <http://example.org/vocabulary/ABO600601> <http://example.org/vocabulary/courseWebsite> "https://is.cuni.cz/studium/predmety/index.php?id=ea629e3e972f695ebb7e4383e410feda&tid=&do=predmet&kod=ABO600601" .
 <http://example.org/vocabulary/ABO600601> <http://example.org/vocabulary/taughtAt> <http://example.org/vocabulary/FF> .
+<http://example.org/vocabulary/ABO600601> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Course> .
 <http://example.org/vocabulary/AHE110018> <http://example.org/vocabulary/courseCode> "AHE110018" .
 <http://example.org/vocabulary/AHE110018> <http://example.org/vocabulary/courseName> "Historical Development of Europe in Comparative Perspective"@en .
 <http://example.org/vocabulary/AHE110018> <http://example.org/vocabulary/courseName> "Historický vývoj Evropy v komparativní perspektivě"@cs .
 <http://example.org/vocabulary/AHE110018> <http://example.org/vocabulary/courseWebsite> "https://is.cuni.cz/studium/predmety/index.php?id=ea629e3e972f695ebb7e4383e410feda&tid=&do=predmet&kod=AHE110018" .
 <http://example.org/vocabulary/AHE110018> <http://example.org/vocabulary/taughtAt> <http://example.org/vocabulary/FF> .
+<http://example.org/vocabulary/AHE110018> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Course> .
 <http://example.org/vocabulary/FD> <http://example.org/vocabulary/facultyName> "Faculty of Transportation Sciences"@en .
 <http://example.org/vocabulary/FD> <http://example.org/vocabulary/facultyName> "Fakulta dopravní"@cs .
 <http://example.org/vocabulary/FD> <http://example.org/vocabulary/facultyWebsite> "https://www.fd.cvut.cz/cz/" .

@@ -52,7 +52,7 @@
                     "offers" : [
                         {
                             "@id" : "ex:AHE110018",
-                            "@type" : "Course",
+                            "@type" : "ex:Course",
                             "courseName" : {
                                 "cs" : ["Historický vývoj Evropy v komparativní perspektivě"],
                                 "en" : ["Historical Development of Europe in Comparative Perspective"]
@@ -98,7 +98,7 @@
                         },
                         {
                             "@id" : "ex:ABO600601",
-                            "@type" : "Course",
+                            "@type" : "ex:Course",
                             "courseName" : {
                                 "cs" : ["Starší česká literatura - přednáška"],
                                 "en" : ["Czech Literature of Older Times - Lecture"]
@@ -202,7 +202,7 @@
                     "offers" : [
                         {
                             "@id" : "ex:02ELMA",
-                            "@type" : "Course",
+                            "@type" : "ex:Course",
                             "courseName" : {
                                 "cs" : ["Elektřina a magnetismus"]
                             },
@@ -262,7 +262,7 @@
                     "offers" : [
                         {
                             "@id" : "ex:15DPLG",
-                            "@type" : "Course",
+                            "@type" : "ex:Course",
                             "courseName" : {
                                 "cs" : ["Dopravní psychologie"]
                             },
