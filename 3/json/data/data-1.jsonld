@@ -8,20 +8,21 @@
         "crsw" : "http://courseware.rkbexplorer.com/ontologies/courseware/",
         "ex" : "http://example.org/vocabulary/",
 
-        "universityName" : "es:universityName",
+        "universities" : {"container" : "@set"},
+
+        "universityName" : { "@id" : "es:universityName", "@container" : "@language"},
         "universityWebsite" : "es:universityWebsite",
 
-        "facultyName" : "ex:facultyName",
+        "facultyName" : { "@id" : "ex:facultyName", "@container" : "@language"},
         "facultyWebsite" : "ex:facultyWebsite",
 
 
-        "courseName" : "ex:courseName",
+        "courseName" :  {"@id" : "ex:courseName", "@container" : "@language"},
         "courseCode" : "ex:courseCode",
         "courseWebsite" : "ex:courseWebsite",
 
         "name" : { "@id" : "foaf:name", "@container" : "@language" },
         "hasBirthDate" : "frapo:hasBirthDate",
-
 
         "hasFaculty" : "ex:hasFaculty",
         "offers" : { "@reverse" : "ex:taughtAt" },
