@@ -3,8 +3,8 @@
 	xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
 	xmlns:tns="http://example.org/xsd"
-targetNamespace="http://example.org/xsd"
-elementFormDefault="qualified"
+	targetNamespace="http://example.org/xsd"
+	elementFormDefault="qualified"
 >
 	<xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="https://www.w3.org/2009/01/xml.xsd"/>
 	<xs:element name='universities'>
