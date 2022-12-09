@@ -7,9 +7,9 @@
         "frapo" : "http://purl.org/cerif/frapo/",
         "crsw" : "http://courseware.rkbexplorer.com/ontologies/courseware/",
         "ex" : "http://example.org/vocabulary/",
-
-        "universities" : {"container" : "@set"},
-
+		
+        "universities" : { "@id" : "_:universities" },
+      
         "universityName" : { "@id" : "es:universityName", "@container" : "@language"},
         "universityWebsite" : "es:universityWebsite",
 
@@ -22,7 +22,7 @@
         "courseWebsite" : "ex:courseWebsite",
 
         "name" : { "@id" : "foaf:name", "@container" : "@language" },
-        "hasBirthDate" : "frapo:hasBirthDate",
+        "hasBirthDate" : {"@id" : "frapo:hasBirthDate", "@type" : "xsd:date"},
 
         "hasFaculty" : "ex:hasFaculty",
         "offers" : { "@reverse" : "ex:taughtAt" },
