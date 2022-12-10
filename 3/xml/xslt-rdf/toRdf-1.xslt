@@ -104,7 +104,6 @@ ex:teachesAt a rdf:Property ;
 
 # INSTANCES
 # University
-
 <xsl:for-each select="u:university">
 ex:<xsl:value-of select="@id"/> a frapo:University ;
 <xsl:for-each select="u:names/u:name">    ex:universityName "<xsl:value-of select="."/>"@<xsl:value-of select="@xml:lang" /> ;&#xa;</xsl:for-each>
@@ -144,6 +143,29 @@ ex:<xsl:value-of select="@id"/> a crsw:Course ;
 </xsl:for-each>
 
 # ASSOCIATIONS
+# University - Faculty
+<xsl:for-each select="//u:faculty">ex:<xsl:value-of select="../../@id"/> ex:hasFaculty ex:<xsl:value-of select="@id"/> .
+</xsl:for-each>
+
+# Course - Faculty
+<xsl:for-each select="//u:course">ex:<xsl:value-of select="@id"/> ex:taughtAt ex:<xsl:value-of select="../../@id"/> .
+</xsl:for-each>
+
+# Student - Faculty
+<xsl:for-each select="//u:faculty/u:students/u:student">ex:<xsl:value-of select="@id"/> ex:studiesAt ex:<xsl:value-of select="../../@id"/> .
+</xsl:for-each>
+
+# Student - Course
+<xsl:for-each select="//u:course/u:students/u:student">ex:<xsl:value-of select="@id"/> ex:studies ex:<xsl:value-of select="../../@id"/> .
+</xsl:for-each>
+
+# Teacher - Course
+<xsl:for-each select="//u:course/u:teachers/u:teacher">ex:<xsl:value-of select="@id"/> ex:teaches ex:<xsl:value-of select="../../@id"/> .
+</xsl:for-each>
+
+# Teacher - Faculty
+<xsl:for-each select="//u:faculty/u:teachers/u:teacher">ex:<xsl:value-of select="@id"/> ex:teachesAt ex:<xsl:value-of select="../../@id"/> .
+</xsl:for-each>
 
 </xsl:template>
 </xsl:stylesheet>
