@@ -1,0 +1,1 @@
+("Předměty,  jejichž název je delší, než 30 znaků")//u:course[string-length(u:names/u:name[@xml:lang="cs"])>30]
