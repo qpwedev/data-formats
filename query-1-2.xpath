@@ -1,0 +1,1 @@
+(:Studenti FF UK narození před rokem 1950:)/u:universities/u:university[@id="charlesUniversity"]/u:faculties/u:faculty[@id="FF"]/u:students/u:student[u:birthday<"1950-00-00"]
