@@ -1,0 +1,1 @@
+(:Předměty na FF UK, na které je zapsáno více než 2 studenti:)/u:universities/u:university[@id="charlesUniversity"]/u:faculties/u:faculty[@id="FF"]/u:courses/u:course[count(u:students/*)>2]
