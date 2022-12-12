@@ -1,0 +1,1 @@
+(:České názvy všech uložených univerzit:)/u:universities/*/u:names/u:name[@xml:lang="cs"]/text()
