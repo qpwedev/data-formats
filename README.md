@@ -7,7 +7,7 @@
 
 - For each hierarchical model create a corresponding XML Schema, enforcing proper datatypes.
 - Represent the data in XML files valid against the created XML Schemas. Utilize the xml:lang attribute to denote the natural language of text values (HINT)
-- Create a set of non-trivial XPath queries to query the XML data.
+- Create a set of non-trivial XPath queries to query the XML data. ✅
 - Create a non-trivial XSLT transformation producing HTML representation of a reasonable subset of your data.
 - Create XSLT transformations producing RDF Turtle representation of your data. This is called a "lifting transformation" - lifting the data to a semantically more precise representation. The resulting RDF data representation should be identical to the one from Homework 2. Validate the resulting file.
 - For each hierarchical model create a corresponding JSON Schema, enforcing proper datatypes.
