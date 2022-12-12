@@ -1,103 +1,147 @@
-<http://example.org/vocabulary/02ELMA> <http://example.org/vocabulary/courseCode> "02ELMA" .
-<http://example.org/vocabulary/02ELMA> <http://example.org/vocabulary/courseName> "Elektřina a magnetismus"@cs .
-<http://example.org/vocabulary/02ELMA> <http://example.org/vocabulary/courseWebsite> "https://bilakniha.cvut.cz/cs/predmet11279205.html#gsc.tab=0" .
-<http://example.org/vocabulary/02ELMA> <http://example.org/vocabulary/taughtAt> <http://example.org/vocabulary/FJFI> .
-<http://example.org/vocabulary/02ELMA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Course> .
-<http://example.org/vocabulary/15DPLG> <http://example.org/vocabulary/courseCode> "15DPLG" .
-<http://example.org/vocabulary/15DPLG> <http://example.org/vocabulary/courseName> "Dopravní psychologie"@cs .
-<http://example.org/vocabulary/15DPLG> <http://example.org/vocabulary/courseWebsite> "https://www.fd.cvut.cz/studenti/predmet-detail.html?kod=615DPLG" .
-<http://example.org/vocabulary/15DPLG> <http://example.org/vocabulary/taughtAt> <http://example.org/vocabulary/FD> .
-<http://example.org/vocabulary/15DPLG> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Course> .
-<http://example.org/vocabulary/ABO600601> <http://example.org/vocabulary/courseCode> "ABO600601" .
-<http://example.org/vocabulary/ABO600601> <http://example.org/vocabulary/courseName> "Czech Literature of Older Times - Lecture"@en .
-<http://example.org/vocabulary/ABO600601> <http://example.org/vocabulary/courseName> "Starší česká literatura - přednáška"@cs .
-<http://example.org/vocabulary/ABO600601> <http://example.org/vocabulary/courseWebsite> "https://is.cuni.cz/studium/predmety/index.php?id=ea629e3e972f695ebb7e4383e410feda&tid=&do=predmet&kod=ABO600601" .
-<http://example.org/vocabulary/ABO600601> <http://example.org/vocabulary/taughtAt> <http://example.org/vocabulary/FF> .
-<http://example.org/vocabulary/ABO600601> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Course> .
-<http://example.org/vocabulary/AHE110018> <http://example.org/vocabulary/courseCode> "AHE110018" .
-<http://example.org/vocabulary/AHE110018> <http://example.org/vocabulary/courseName> "Historical Development of Europe in Comparative Perspective"@en .
-<http://example.org/vocabulary/AHE110018> <http://example.org/vocabulary/courseName> "Historický vývoj Evropy v komparativní perspektivě"@cs .
-<http://example.org/vocabulary/AHE110018> <http://example.org/vocabulary/courseWebsite> "https://is.cuni.cz/studium/predmety/index.php?id=ea629e3e972f695ebb7e4383e410feda&tid=&do=predmet&kod=AHE110018" .
-<http://example.org/vocabulary/AHE110018> <http://example.org/vocabulary/taughtAt> <http://example.org/vocabulary/FF> .
-<http://example.org/vocabulary/AHE110018> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Course> .
-<http://example.org/vocabulary/FD> <http://example.org/vocabulary/facultyName> "Faculty of Transportation Sciences"@en .
-<http://example.org/vocabulary/FD> <http://example.org/vocabulary/facultyName> "Fakulta dopravní"@cs .
-<http://example.org/vocabulary/FD> <http://example.org/vocabulary/facultyWebsite> "https://www.fd.cvut.cz/cz/" .
-<http://example.org/vocabulary/FD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/cerif/frapo/Faculty> .
-<http://example.org/vocabulary/FF> <http://example.org/vocabulary/facultyName> "Faculty of Arts"@en .
-<http://example.org/vocabulary/FF> <http://example.org/vocabulary/facultyName> "Filozofická fakulta"@cs .
-<http://example.org/vocabulary/FF> <http://example.org/vocabulary/facultyWebsite> "https://www.ff.cuni.cz/" .
-<http://example.org/vocabulary/FF> <http://example.org/vocabulary/facultyWebsite> "https://www.ff.cuni.cz/en" .
-<http://example.org/vocabulary/FF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/cerif/frapo/Faculty> .
-<http://example.org/vocabulary/FIT> <http://example.org/vocabulary/facultyName> "Faculty of information technology"@en .
-<http://example.org/vocabulary/FIT> <http://example.org/vocabulary/facultyName> "Fakulta informačních technologií"@cs .
-<http://example.org/vocabulary/FIT> <http://example.org/vocabulary/facultyWebsite> "https://www.fit.vut.cz/.cs/" .
-<http://example.org/vocabulary/FIT> <http://example.org/vocabulary/facultyWebsite> "https://www.fit.vut.cz/.en/" .
-<http://example.org/vocabulary/FIT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/cerif/frapo/Faculty> .
-<http://example.org/vocabulary/FJFI> <http://example.org/vocabulary/facultyName> "Faculty of Nuclear Sciences and Physical Engineering"@en .
-<http://example.org/vocabulary/FJFI> <http://example.org/vocabulary/facultyName> "Fakulta jaderná a fyzikálně inženýrská"@cs .
-<http://example.org/vocabulary/FJFI> <http://example.org/vocabulary/facultyWebsite> "https://www.fjfi.cvut.cz/cz/" .
-<http://example.org/vocabulary/FJFI> <http://example.org/vocabulary/facultyWebsite> "https://www.fjfi.cvut.cz/en/" .
-<http://example.org/vocabulary/FJFI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/cerif/frapo/Faculty> .
-<http://example.org/vocabulary/alenaVybusna> <http://example.org/vocabulary/studies> <http://example.org/vocabulary/02ELMA> .
-<http://example.org/vocabulary/alenaVybusna> <http://example.org/vocabulary/studiesAt> <http://example.org/vocabulary/FJFI> .
-<http://example.org/vocabulary/alenaVybusna> <http://purl.org/cerif/frapo/hasBirthDate> "1986-04-26"^^<http://www.w3.org/TR/xmlschema11-2/date> .
-<http://example.org/vocabulary/alenaVybusna> <http://xmlns.com/foaf/0.1/name> "Alena Výbušná"@cs .
-<http://example.org/vocabulary/brnoUniversityOfTechnology> <es:universityName> "Brno University of Technology"@en .
-<http://example.org/vocabulary/brnoUniversityOfTechnology> <es:universityName> "Vysoké učení technické v Brně"@cs .
-<http://example.org/vocabulary/brnoUniversityOfTechnology> <es:universityWebsite> "https://www.vut.cz" .
-<http://example.org/vocabulary/brnoUniversityOfTechnology> <http://example.org/vocabulary/hasFaculty> <http://example.org/vocabulary/FIT> .
-<http://example.org/vocabulary/brnoUniversityOfTechnology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/cerif/frapo/University> .
-<http://example.org/vocabulary/charlesUniversity> <es:universityName> "Charles University"@en .
-<http://example.org/vocabulary/charlesUniversity> <es:universityName> "Univerzita Karlova"@cs .
-<http://example.org/vocabulary/charlesUniversity> <es:universityWebsite> "https://www.cuni.cz" .
-<http://example.org/vocabulary/charlesUniversity> <es:universityWebsite> "https://www.cuni.cz/uken-1.html" .
-<http://example.org/vocabulary/charlesUniversity> <http://example.org/vocabulary/hasFaculty> <http://example.org/vocabulary/FF> .
-<http://example.org/vocabulary/charlesUniversity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/cerif/frapo/University> .
-<http://example.org/vocabulary/czechTechnicalUniversity> <es:universityName> "Czech Technical University in Prague"@en .
-<http://example.org/vocabulary/czechTechnicalUniversity> <es:universityName> "České vysoké učení technické v Praze"@cs .
-<http://example.org/vocabulary/czechTechnicalUniversity> <es:universityWebsite> "https://www.cvut.cz" .
-<http://example.org/vocabulary/czechTechnicalUniversity> <http://example.org/vocabulary/hasFaculty> <http://example.org/vocabulary/FD> .
-<http://example.org/vocabulary/czechTechnicalUniversity> <http://example.org/vocabulary/hasFaculty> <http://example.org/vocabulary/FJFI> .
-<http://example.org/vocabulary/czechTechnicalUniversity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/cerif/frapo/University> .
-<http://example.org/vocabulary/diaLiskova> <http://example.org/vocabulary/studies> <http://example.org/vocabulary/AHE110018> .
-<http://example.org/vocabulary/diaLiskova> <http://example.org/vocabulary/studiesAt> <http://example.org/vocabulary/FF> .
-<http://example.org/vocabulary/diaLiskova> <http://purl.org/cerif/frapo/hasBirthDate> "2000-05-27"^^<http://www.w3.org/TR/xmlschema11-2/date> .
-<http://example.org/vocabulary/diaLiskova> <http://xmlns.com/foaf/0.1/name> "Dia Líšková"@cs .
-<http://example.org/vocabulary/janaStikarova> <http://example.org/vocabulary/teaches> <http://example.org/vocabulary/15DPLG> .
-<http://example.org/vocabulary/janaStikarova> <http://example.org/vocabulary/teachesAt> <http://example.org/vocabulary/FD> .
-<http://example.org/vocabulary/janaStikarova> <http://purl.org/cerif/frapo/hasBirthDate> "1989-01-09"^^<http://www.w3.org/TR/xmlschema11-2/date> .
-<http://example.org/vocabulary/janaStikarova> <http://xmlns.com/foaf/0.1/name> "PhDr. Mgr. Jana Štikarová Ph.D."@cs .
-<http://example.org/vocabulary/jaroslavMira> <http://example.org/vocabulary/teaches> <http://example.org/vocabulary/AHE110018> .
-<http://example.org/vocabulary/jaroslavMira> <http://example.org/vocabulary/teachesAt> <http://example.org/vocabulary/FF> .
-<http://example.org/vocabulary/jaroslavMira> <http://purl.org/cerif/frapo/hasBirthDate> "1968-08-21"^^<http://www.w3.org/TR/xmlschema11-2/date> .
-<http://example.org/vocabulary/jaroslavMira> <http://xmlns.com/foaf/0.1/name> "Mgr. Jaroslav Mira Ph.D."@cs .
-<http://example.org/vocabulary/jiriHrivnak> <http://example.org/vocabulary/teaches> <http://example.org/vocabulary/02ELMA> .
-<http://example.org/vocabulary/jiriHrivnak> <http://example.org/vocabulary/teachesAt> <http://example.org/vocabulary/FJFI> .
-<http://example.org/vocabulary/jiriHrivnak> <http://purl.org/cerif/frapo/hasBirthDate> "1968-08-20"^^<http://www.w3.org/TR/xmlschema11-2/date> .
-<http://example.org/vocabulary/jiriHrivnak> <http://xmlns.com/foaf/0.1/name> "doc. Ing. Jiří Hrivnák Ph.D."@cs .
-<http://example.org/vocabulary/johnDomiesavac> <http://example.org/vocabulary/studies> <http://example.org/vocabulary/15DPLG> .
-<http://example.org/vocabulary/johnDomiesavac> <http://example.org/vocabulary/studiesAt> <http://example.org/vocabulary/FD> .
-<http://example.org/vocabulary/johnDomiesavac> <http://purl.org/cerif/frapo/hasBirthDate> "1992-04-17"^^<http://www.w3.org/TR/xmlschema11-2/date> .
-<http://example.org/vocabulary/johnDomiesavac> <http://xmlns.com/foaf/0.1/name> "John Domiešavač"@sk .
-<http://example.org/vocabulary/josefUridil> <http://example.org/vocabulary/studies> <http://example.org/vocabulary/15DPLG> .
-<http://example.org/vocabulary/josefUridil> <http://example.org/vocabulary/studies> <http://example.org/vocabulary/AHE110018> .
-<http://example.org/vocabulary/josefUridil> <http://example.org/vocabulary/studiesAt> <http://example.org/vocabulary/FD> .
-<http://example.org/vocabulary/josefUridil> <http://purl.org/cerif/frapo/hasBirthDate> "1985-11-19"^^<http://www.w3.org/TR/xmlschema11-2/date> .
-<http://example.org/vocabulary/josefUridil> <http://xmlns.com/foaf/0.1/name> "Josef Uřídil"@cs .
-<http://example.org/vocabulary/karelMatej> <http://example.org/vocabulary/studies> <http://example.org/vocabulary/ABO600601> .
-<http://example.org/vocabulary/karelMatej> <http://example.org/vocabulary/studies> <http://example.org/vocabulary/AHE110018> .
-<http://example.org/vocabulary/karelMatej> <http://example.org/vocabulary/studiesAt> <http://example.org/vocabulary/FF> .
-<http://example.org/vocabulary/karelMatej> <http://purl.org/cerif/frapo/hasBirthDate> "1860-02-21"^^<http://www.w3.org/TR/xmlschema11-2/date> .
-<http://example.org/vocabulary/karelMatej> <http://xmlns.com/foaf/0.1/name> "Karel Matej Čech-Chod"@cs .
-<http://example.org/vocabulary/marieSkaropova> <http://example.org/vocabulary/teaches> <http://example.org/vocabulary/ABO600601> .
-<http://example.org/vocabulary/marieSkaropova> <http://example.org/vocabulary/teachesAt> <http://example.org/vocabulary/FF> .
-<http://example.org/vocabulary/marieSkaropova> <http://purl.org/cerif/frapo/hasBirthDate> "1957-09-10"^^<http://www.w3.org/TR/xmlschema11-2/date> .
-<http://example.org/vocabulary/marieSkaropova> <http://xmlns.com/foaf/0.1/name> "Mgr. Marie Škaropová Ph.D."@cs .
-<http://example.org/vocabulary/olkeSyba> <http://example.org/vocabulary/studiesAt> <http://example.org/vocabulary/FIT> .
-<http://example.org/vocabulary/olkeSyba> <http://purl.org/cerif/frapo/hasBirthDate> "1899-09-19"^^<http://www.w3.org/TR/xmlschema11-2/date> .
-<http://example.org/vocabulary/olkeSyba> <http://xmlns.com/foaf/0.1/name> "Olke Rene Syba"@en .
-<http://example.org/vocabulary/petrKopecky> <http://example.org/vocabulary/studies> <http://example.org/vocabulary/ABO600601> .
-<http://example.org/vocabulary/petrKopecky> <http://example.org/vocabulary/studiesAt> <http://example.org/vocabulary/FF> .
-<http://example.org/vocabulary/petrKopecky> <http://purl.org/cerif/frapo/hasBirthDate> "1969-04-20"^^<http://www.w3.org/TR/xmlschema11-2/date> .
-<http://example.org/vocabulary/petrKopecky> <http://xmlns.com/foaf/0.1/name> "Petr Kopecký"@cs .
+@prefix ns0: <http://example.org/vocabulary/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ns1: <http://purl.org/cerif/frapo/> .
+@prefix ns2: <http://www.w3.org/TR/xmlschema11-2/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://example.org/vocabulary/charlesUniversity>
+  a <http://purl.org/cerif/frapo/University> ;
+  ns0:hasFaculty ns0:FF ;
+  ns0:universityName "Univerzita Karlova"@cs, "Charles University"@en ;
+  ns0:universityWebsite "https://www.cuni.cz"^^xsd:string, "https://www.cuni.cz/uken-1.html"^^xsd:string .
+
+ns0:FF
+  a <http://purl.org/cerif/frapo/Faculty> ;
+  ns0:facultyName "Filozofická fakulta"@cs, "Faculty of Arts"@en ;
+  ns0:facultyWebsite "https://www.ff.cuni.cz/"^^xsd:string, "https://www.ff.cuni.cz/en"^^xsd:string .
+
+ns0:jaroslavMira
+  ns0:teachesAt ns0:FF ;
+  a <http://njh.me/Teacher> ;
+  ns1:hasBirthDate "1968-08-21"^^ns2:date ;
+  foaf:name "Mgr. Jaroslav Mira Ph.D."@cs ;
+  ns0:teaches ns0:AHE110018 .
+
+ns0:marieSkaropova
+  ns0:teachesAt ns0:FF ;
+  a <http://njh.me/Teacher> ;
+  ns1:hasBirthDate "1957-09-10"^^ns2:date ;
+  foaf:name "Mgr. Marie Škaropová Ph.D."@cs ;
+  ns0:teaches ns0:ABO600601 .
+
+ns0:karelMatej
+  ns0:studiesAt ns0:FF ;
+  a <http://njh.me/Student> ;
+  ns1:hasBirthDate "1860-02-21"^^ns2:date ;
+  foaf:name "Karel Matej Čech-Chod"@cs ;
+  ns0:studies ns0:AHE110018, ns0:ABO600601 .
+
+ns0:petrKopecky
+  ns0:studiesAt ns0:FF ;
+  a <http://njh.me/Student> ;
+  ns1:hasBirthDate "1969-04-20"^^ns2:date ;
+  foaf:name "Petr Kopecký"@cs ;
+  ns0:studies ns0:ABO600601 .
+
+ns0:diaLiskova
+  ns0:studiesAt ns0:FF ;
+  a <http://njh.me/Student> ;
+  ns1:hasBirthDate "2000-05-27"^^ns2:date ;
+  foaf:name "Dia Líšková"@cs ;
+  ns0:studies ns0:AHE110018 .
+
+ns0:AHE110018
+  ns0:taughtAt ns0:FF ;
+  a ns0:Course ;
+  ns0:courseCode "AHE110018"^^xsd:string ;
+  ns0:courseName "Historický vývoj Evropy v komparativní perspektivě"@cs, "Historical Development of Europe in Comparative Perspective"@en ;
+  ns0:courseWebsite "https://is.cuni.cz/studium/predmety/index.php?id=ea629e3e972f695ebb7e4383e410feda&tid=&do=predmet&kod=AHE110018"^^xsd:string .
+
+ns0:josefUridil
+  ns0:studies ns0:AHE110018, ns0:15DPLG ;
+  a <http://njh.me/Student> ;
+  ns1:hasBirthDate "1985-11-19"^^ns2:date ;
+  foaf:name "Josef Uřídil"@cs ;
+  ns0:studiesAt ns0:FD .
+
+ns0:ABO600601
+  ns0:taughtAt ns0:FF ;
+  a ns0:Course ;
+  ns0:courseCode "ABO600601"^^xsd:string ;
+  ns0:courseName "Starší česká literatura - přednáška"@cs, "Czech Literature of Older Times - Lecture"@en ;
+  ns0:courseWebsite "https://is.cuni.cz/studium/predmety/index.php?id=ea629e3e972f695ebb7e4383e410feda&tid=&do=predmet&kod=ABO600601"^^xsd:string .
+
+ns0:czechTechnicalUniversity
+  a ns1:University ;
+  ns0:hasFaculty ns0:FJFI, ns0:FD ;
+  ns0:universityName "České vysoké učení technické v Praze"@cs, "Czech Technical University in Prague"@en ;
+  ns0:universityWebsite "https://www.cvut.cz"^^xsd:string .
+
+ns0:FJFI
+  a ns1:Faculty ;
+  ns0:facultyName "Fakulta jaderná a fyzikálně inženýrská"@cs, "Faculty of Nuclear Sciences and Physical Engineering"@en ;
+  ns0:facultyWebsite "https://www.fjfi.cvut.cz/cz/"^^xsd:string, "https://www.fjfi.cvut.cz/en/"^^xsd:string .
+
+ns0:jiriHrivnak
+  ns0:teachesAt ns0:FJFI ;
+  a <http://njh.me/Teacher> ;
+  ns1:hasBirthDate "1968-08-20"^^ns2:date ;
+  foaf:name "doc. Ing. Jiří Hrivnák Ph.D."@cs ;
+  ns0:teaches ns0:02ELMA .
+
+ns0:alenaVybusna
+  ns0:studiesAt ns0:FJFI ;
+  a <http://njh.me/Student> ;
+  ns1:hasBirthDate "1986-04-26"^^ns2:date ;
+  foaf:name "Alena Výbušná"@cs ;
+  ns0:studies ns0:02ELMA .
+
+ns0:02ELMA
+  ns0:taughtAt ns0:FJFI ;
+  a ns0:Course ;
+  ns0:courseCode "02ELMA"^^xsd:string ;
+  ns0:courseName "Elektřina a magnetismus"@cs ;
+  ns0:courseWebsite "https://bilakniha.cvut.cz/cs/predmet11279205.html#gsc.tab=0"^^xsd:string .
+
+ns0:FD
+  a ns1:Faculty ;
+  ns0:facultyName "Fakulta dopravní"@cs, "Faculty of Transportation Sciences"@en ;
+  ns0:facultyWebsite "https://www.fd.cvut.cz/cz/"^^xsd:string .
+
+ns0:janaStikarova
+  ns0:teachesAt ns0:FD ;
+  a <http://njh.me/Teacher> ;
+  ns1:hasBirthDate "1989-01-09"^^ns2:date ;
+  foaf:name "PhDr. Mgr. Jana Štikarová Ph.D."@cs ;
+  ns0:teaches ns0:15DPLG .
+
+ns0:johnDomiesavac
+  ns0:studiesAt ns0:FD ;
+  a <http://njh.me/Student> ;
+  ns1:hasBirthDate "1992-04-17"^^ns2:date ;
+  foaf:name "John Domiešavač"@sk ;
+  ns0:studies ns0:15DPLG .
+
+ns0:15DPLG
+  ns0:taughtAt ns0:FD ;
+  a ns0:Course ;
+  ns0:courseCode "15DPLG"^^xsd:string ;
+  ns0:courseName "Dopravní psychologie"@cs ;
+  ns0:courseWebsite "https://www.fd.cvut.cz/studenti/predmet-detail.html?kod=615DPLG"^^xsd:string .
+
+ns0:brnoUniversityOfTechnology
+  a ns1:University ;
+  ns0:hasFaculty ns0:FIT ;
+  ns0:universityName "Vysoké učení technické v Brně"@cs, "Brno University of Technology"@en ;
+  ns0:universityWebsite "https://www.vut.cz"^^xsd:string .
+
+ns0:FIT
+  a ns1:Faculty ;
+  ns0:facultyName "Fakulta informačních technologií"@cs, "Faculty of information technology"@en ;
+  ns0:facultyWebsite "https://www.fit.vut.cz/.cs/"^^xsd:string, "https://www.fit.vut.cz/.en/"^^xsd:string .
+
+ns0:olkeSyba
+  ns0:studiesAt ns0:FIT ;
+  a <http://njh.me/Student> ;
+  ns1:hasBirthDate "1899-09-19"^^ns2:date ;
+  foaf:name "Olke Rene Syba"@en .
