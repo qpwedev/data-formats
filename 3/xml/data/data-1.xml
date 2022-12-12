@@ -30,7 +30,7 @@
                             <u:website>https://is.cuni.cz/studium/predmety/index.php?id=ea629e3e972f695ebb7e4383e410feda&amp;tid=&amp;do=predmet&amp;kod=AHE110018</u:website>
                         </u:websites>
                         <u:students>
-                            <u:student id="karelMatej" >
+                            <u:student id="karelMatej">
                                 <u:name xml:lang="cs">Karel Matej Čech-Chod</u:name>
                                 <u:birthday>1860-02-21</u:birthday>
                             </u:student>
