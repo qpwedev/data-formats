@@ -1,17 +1,14 @@
 {
     "@context" : {
         "foaf" : "http://xmlns.com/foaf/0.1/",
-        "rdf" :  "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
         "xsd" : "http://www.w3.org/TR/xmlschema11-2/",
         "frapo" : "http://purl.org/cerif/frapo/",
-        "crsw" : "http://courseware.rkbexplorer.com/ontologies/courseware/",
         "ex" : "http://example.org/vocabulary/",
 		
         "universities" : { "@id" : "_:universities" },
       
-        "universityName" : { "@id" : "es:universityName", "@container" : "@language"},
-        "universityWebsite" : "es:universityWebsite",
+        "universityName" : { "@id" : "ex:universityName", "@container" : "@language"},
+        "universityWebsite" : "ex:universityWebsite",
 
         "facultyName" : { "@id" : "ex:facultyName", "@container" : "@language"},
         "facultyWebsite" : "ex:facultyWebsite",
