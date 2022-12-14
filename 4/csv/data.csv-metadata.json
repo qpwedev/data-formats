@@ -1,0 +1,363 @@
+{
+    "@context" : [
+        "http://www.w3.org/ns/csvw",
+        {
+            "@language" : "en",
+            "@base" : "https://example.org/vocabulary/csv/"
+        }
+    ],
+    "@type" : "TableGroup",
+    "@id" : "universities",
+    "tables" :[
+        {
+            "@type" : "Table",
+            "@id" : "Student",
+            "url" : "Student.csv",
+            "tableSchema" : {
+                "@type" : "Schema",
+                "aboutUrl" : "{+uri}",
+                "columns" : [
+                    {
+                        "@type" : "Column",
+                        "name" : "uri",
+                        "titles" : "URI",
+                        "required" : true,
+                        "datatype" : "anyURI",
+                        "propertyUrl" : "rdf:type",
+                        "valueUrl" : "http://example.org/vocabulary/Student"
+                    },
+                    {
+                        "@type" : "Column",
+                    },
+                    {
+                        "@type" : "Column",
+                        "name" : "hasBirthDate",
+                        "titles" : "Has birth date",
+                        "required" : true,
+                        "datatype" : "xsd:date",
+                        "propertyUrl" : "frapo:hasBirthDate"
+                    }
+                ],
+                "primaryKey" : "uri"
+            }
+        },
+        {
+            "@type" : "Table",
+            "@id" : "Teacher",
+            "url" : "Teacher.csv",
+            "tableSchema" : {
+                "@type" : "Schema",
+                "aboutUrl" : "{+uri}",
+                "columns" : [
+                    {
+                        "@type" : "Column",
+                        "name" : "uri",
+                        "titles" : "URI",
+                        "required" : true,
+                        "datatype" : "anyURI",
+                        "propertyUrl" : "rdf:type",
+                        "valueUrl" : "http://example.org/vocabulary/Teacher"
+                    },
+                    {
+                        "@type" : "Column",
+                    },
+                    {
+                        "@type" : "Column",
+                        "name" : "hasBirthDate",
+                        "titles" : "Has birth date",
+                        "required" : true,
+                        "datatype" : "xsd:date",
+                        "propertyUrl" : "frapo:hasBirthDate"
+                    }
+                ],
+                "primaryKey" : "uri"
+            }
+        },
+        {
+            "@type" : "Table",
+            "@id" : "University",
+            "url" : "University.csv",
+            "tableSchema" : {
+                "@type" : "Schema",
+                "aboutUrl" : "{+uri}",
+                "columns" : [
+                    {
+                        "@type" : "Column",
+                        "name" : "uri",
+                        "titles" : "URI",
+                        "required" : true,
+                        "datatype" : "anyURI",
+                        "propertyUrl" : "rdf:type",
+                        "valueUrl" : "frapo:University"
+                    }
+                ],
+                "primaryKey" : "uri"
+            }
+        },
+        {
+            "@type" : "Table",
+            "@id" : "Faculty",
+            "url" : "Faculty.csv",
+            "tableSchema" : {
+                "@type" : "Schema",
+                "columns" : [
+                    {
+                        "@type" : "Column",
+                        "name" : "uri",
+                        "titles" : "URI",
+                        "required" : true,
+                        "datatype" : "anyURI",
+                        "aboutUrl" : "{+uri}",
+                        "propertyUrl" : "rdf:type",
+                        "valueUrl" : "frapo:Faculty"
+                    },
+                    {
+                        "@type" : "Column",
+                        "name" : "university_uri",
+                        "titles" : "University URI",
+                        "required" : true,
+                        "aboutUrl" : "{+university_uri}",
+                        "propertyUrl" : "https://example.org/vocabulary/hasFaculty",
+                        "valueUrl" : "{+uri}"
+                    }
+                ],
+                "primaryKey" : "uri",
+                "foreignKeys" : [
+                    {
+                        "columnReference" : "university_uri",
+                        "reference" : {
+                            "resource" : "https://example.org/vocabulary/csv/University.csv",
+                            "columnReference" : "uri"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "@type" : "Table",
+            "@id" : "Course",
+            "url" : "Course.csv",
+            "tableSchema" : {
+                "@type" : "Schema",
+                "aboutUrl" : "{+uri}",
+                "columns" : [
+                    {
+                        "@type" : "Column",
+                        "name" : "uri",
+                        "titles" : "URI",
+                        "required" : true,
+                        "datatype" : "anyURI",
+                        "propertyUrl" : "rdf:type",
+                        "valueUrl" : "crsw:Course"
+                    },
+                    {
+                        "@type" : "Column",
+                    },
+                    {
+                        "@type" : "Column",
+                        "name" : "faculty_uri",
+                        "titles" : "Faculty URI",
+                        "required" : true,
+                        "datatype" : "anyURI",
+                        "propertyUrl" : "https://example.org/vocabulary/taughtAt",
+                        "valueUrl" : "{+faculty_uri}"
+                    }
+                ],
+                "primaryKey" : "uri",
+                "foreignKeys" : [
+                    {
+                        "columnReference" : "faculty_uri",
+                        "reference" : {
+                            "resource" : "https://example.org/vocabulary/csv/Faculty.csv",
+                            "columnReference" : "uri"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "@type" : "Table",
+            "@id" : "studiesAt",
+            "url" : "studiesAt.csv",
+            "tableSchema" : {
+                "@type" : "Schema",
+                "aboutUrl": "{+student_uri}",
+                "propertyUrl" : "https://example.org/vocabulary/studiesAt",
+                "valueUrl" : "{+faculty_uri}",
+                "columns" : [
+                    {
+                        "@type" : "Column",
+                        "name" : "faculty_uri",
+                        "titles" : "Faculty URI",
+                        "required" : true,
+                        "datatype" : "anyURI",
+                        "suppressOutput" : true
+                    },
+                    {
+                        "@type" : "Column",
+                        "name" : "student_uri",
+                        "titles" : "Student URI",
+                        "required" : true,
+                        "datatype" : "anyURI",
+                        "suppressOutput" : true
+                    }
+                ],
+                "primaryKey" : ["faculty_uri", "student_uri"],
+                "foreignKeys" : [
+                    {
+                        "columnReference" : "faculty_uri",
+                        "reference" : {
+                            "resource" : "https://example.org/vocabulary/csv/Faculty.csv",
+                            "columnReference" : "uri"
+                        }
+                    },
+                    {
+                        "columnReference" : "student_uri",
+                        "reference" : {
+                            "resource" : "https://example.org/vocabulary/csv/Student.csv",
+                            "columnReference" : "uri"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "@type" : "Table",
+            "@id" : "teachesAt",
+            "url" : "teachesAt.csv",
+            "tableSchema" : {
+                "@type" : "Schema",
+                "aboutUrl": "{+teacher_uri}",
+                "propertyUrl" : "https://example.org/vocabulary/teachesAt",
+                "valueUrl" : "{+faculty_uri}",
+                "columns" : [
+                    {
+                        "@type" : "Column",
+                        "name" : "faculty_uri",
+                        "titles" : "Faculty URI",
+                        "required" : true,
+                        "datatype" : "anyURI",
+                        "suppressOutput" : true
+                    },
+                    {
+                        "@type" : "Column",
+                        "name" : "teacher_uri",
+                        "titles" : "Teacher URI",
+                        "required" : true,
+                        "datatype" : "anyURI",
+                        "suppressOutput" : true
+                    }
+                ],
+                "primaryKey" : ["faculty_uri", "teacher_uri"],
+                "foreignKeys" : [
+                    {
+                        "columnReference" : "faculty_uri",
+                        "reference" : {
+                            "resource" : "https://example.org/vocabulary/csv/Faculty.csv",
+                            "columnReference" : "uri"
+                        }
+                    },
+                    {
+                        "columnReference" : "teacher_uri",
+                        "reference" : {
+                            "resource" : "https://example.org/vocabulary/csv/Teacher.csv",
+                            "columnReference" : "uri"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "@type" : "Table",
+            "@id" : "studies",
+            "url" : "studies.csv",
+            "tableSchema" : {
+                "@type" : "Schema",
+                "aboutUrl": "{+student_uri}",
+                "propertyUrl" : "https://example.org/vocabulary/studies",
+                "valueUrl" : "{+course_uri}",
+                "columns" : [
+                    {
+                        "@type" : "Column",
+                        "name" : "course_uri",
+                        "titles" : "Course URI",
+                        "required" : true,
+                        "datatype" : "anyURI",
+                        "suppressOutput" : true
+                    },
+                    {
+                        "@type" : "Column",
+                        "name" : "student_uri",
+                        "titles" : "Student URI",
+                        "required" : true,
+                        "datatype" : "anyURI",
+                        "suppressOutput" : true
+                    }
+                ],
+                "primaryKey" : ["course_uri", "student_uri"],
+                "foreignKeys" : [
+                    {
+                        "columnReference" : "course_uri",
+                        "reference" : {
+                            "resource" : "https://example.org/vocabulary/csv/Course.csv",
+                            "columnReference" : ""
+                        }
+                    },
+                    {
+                        "columnReference" : "student_uri",
+                        "reference" : {
+                            "resource" : "https://example.org/vocabulary/csv/Student.csv",
+                            "columnReference" : "uri"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "@type" : "Table",
+            "@id" : "teaches",
+            "url" : "teaches.csv",
+            "tableSchema" : {
+                "@type" : "Schema",
+                "aboutUrl": "{+teacher_uri}",
+                "propertyUrl" : "https://example.org/vocabulary/teaches",
+                "valueUrl" : "{+course_uri}",
+                "columns" : [
+                    {
+                        "@type" : "Column",
+                        "name" : "course_uri",
+                        "titles" : "Course URI",
+                        "required" : true,
+                        "datatype" : "anyURI",
+                        "suppressOutput" : true
+                    },
+                    {
+                        "@type" : "Column",
+                        "name" : "teacher_uri",
+                        "titles" : "Teacher URI",
+                        "required" : true,
+                        "datatype" : "anyURI",
+                        "suppressOutput" : true
+                    }
+                ],
+                "primaryKey" : ["course_uri", "teacher_uri"],
+                "foreignKeys" : [
+                    {
+                        "columnReference" : "course_uri",
+                        "reference" : {
+                            "resource" : "https://example.org/vocabulary/csv/Course.csv",
+                            "columnReference" : "uri"
+                        }
+                    },
+                    {
+                        "columnReference" : "teacher_uri",
+                        "reference" : {
+                            "resource" : "https://example.org/vocabulary/csv/Teacher.csv",
+                            "columnReference" : "uri"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}
