@@ -116,6 +116,7 @@
                         "name" : "university_uri",
                         "titles" : "University URI",
                         "required" : true,
+                        "datatype" : "anyURI",
                         "aboutUrl" : "{+university_uri}",
                         "propertyUrl" : "https://example.org/vocabulary/hasFaculty",
                         "valueUrl" : "{+uri}"
