@@ -8,15 +8,15 @@
         "universities" : { "@id" : "_:universities" },
       
         "universityName" : { "@id" : "ex:universityName", "@container" : "@language"},
-        "universityWebsite" : "ex:universityWebsite",
+        "universityWebsite" : { "@id" : "ex:universityWebsite", "@type" : "@vocab"},
 
         "facultyName" : { "@id" : "ex:facultyName", "@container" : "@language"},
-        "facultyWebsite" : "ex:facultyWebsite",
+        "facultyWebsite" : { "@id" : "ex:facultyWebsite", "@type" : "@vocab"}, 
 
 
         "courseName" :  {"@id" : "ex:courseName", "@container" : "@language"},
         "courseCode" : "ex:courseCode",
-        "courseWebsite" : "ex:courseWebsite",
+        "courseWebsite" : { "@id" : "ex:courseWebsite", "@type" : "@vocab" },
 
         "name" : { "@id" : "foaf:name", "@container" : "@language" },
         "hasBirthDate" : {"@id" : "frapo:hasBirthDate", "@type" : "xsd:date"},
@@ -59,7 +59,7 @@
                             "isStudiedBy" : [
                                 {
                                     "@id" : "ex:karelMatej",
-                                    "@type" : "Student",
+                                    "@type" : "ex:Student",
                                     "name" : {
                                         "cs" : ["Karel Matej Čech-Chod"]
                                     },
@@ -67,7 +67,7 @@
                                 },
                                 {
                                     "@id" : "ex:diaLiskova",
-                                    "@type" : "Student",
+                                    "@type" : "ex:Student",
                                     "name" : {
                                         "cs" : ["Dia Líšková"]
                                     },
@@ -75,7 +75,7 @@
                                 },
                                 {
                                     "@id" : "ex:josefUridil",
-                                    "@type" : "Student",
+                                    "@type" : "ex:Student",
                                     "name" : {
                                         "cs" : ["Josef Uřídil"]
                                     },
@@ -85,7 +85,7 @@
                             "isTaughtBy" : [
                                 {
                                     "@id" : "ex:jaroslavMira",
-                                    "@type" : "Teacher",
+                                    "@type" : "ex:Teacher",
                                     "name" : {
                                         "cs" : ["Mgr. Jaroslav Mira Ph.D."]
                                     },
@@ -105,7 +105,7 @@
                             "isStudiedBy" : [
                                 {
                                     "@id" : "ex:karelMatej",
-                                    "@type" : "Student",
+                                    "@type" : "ex:Student",
                                     "name" : {
                                         "cs" : ["Karel Matej Čech-Chod"]
                                     },
@@ -113,7 +113,7 @@
                                 },
                                 {
                                     "@id" : "ex:petrKopecky",
-                                    "@type" : "Student",
+                                    "@type" : "ex:Student",
                                     "name" : {
                                         "cs" : ["Petr Kopecký"]
                                     },
@@ -123,7 +123,7 @@
                             "isTaughtBy" : [
                                 {
                                     "@id" : "ex:marieSkaropova",
-                                    "@type" : "Teacher",
+                                    "@type" : "ex:Teacher",
                                     "name" : {
                                         "cs" : ["Mgr. Marie Škaropová Ph.D."]
                                     },
@@ -135,7 +135,7 @@
                     "isVisitedBy" : [
                         {
                             "@id" : "ex:karelMatej",
-                            "@type" : "Student",
+                            "@type" : "ex:Student",
                             "name" : {
                                 "cs" : ["Karel Matej Čech-Chod"]
                             },
@@ -143,7 +143,7 @@
                         },
                         {
                             "@id" : "ex:petrKopecky",
-                            "@type" : "Student",
+                            "@type" : "ex:Student",
                             "name" : {
                                 "cs" : ["Petr Kopecký"]
                             },
@@ -151,7 +151,7 @@
                         },
                         {
                             "@id" : "ex:diaLiskova",
-                            "@type" : "Student",
+                            "@type" : "ex:Student",
                             "name" : {
                                 "cs" : ["Dia Líšková"]
                             },
@@ -161,7 +161,7 @@
                     "employs" : [
                         {
                             "@id" : "ex:jaroslavMira",
-                            "@type" : "Teacher",
+                            "@type" : "ex:Teacher",
                             "name" : {
                                 "cs" : ["Mgr. Jaroslav Mira Ph.D."]
                             },
@@ -169,7 +169,7 @@
                         },
                         {
                             "@id" : "ex:marieSkaropova",
-                            "@type" : "Teacher",
+                            "@type" : "ex:Teacher",
                             "name" : {
                                 "cs" : ["Mgr. Marie Škaropová Ph.D."]
                             },
@@ -208,7 +208,7 @@
                             "isStudiedBy" : [
                                 {
                                     "@id" : "ex:alenaVybusna",
-                                    "@type" : "Student",
+                                    "@type" : "ex:Student",
                                     "name" : {
                                         "cs" : ["Alena Výbušná"]
                                     },
@@ -218,7 +218,7 @@
                             "isTaughtBy" : [
                                 {
                                     "@id" : "ex:jiriHrivnak",
-                                    "@type" : "Teacher",
+                                    "@type" : "ex:Teacher",
                                     "name" : {
                                         "cs" : ["doc. Ing. Jiří Hrivnák Ph.D."]
                                     },
@@ -230,7 +230,7 @@
                     "isVisitedBy" : [
                         {
                             "@id" : "ex:alenaVybusna",
-                            "@type" : "Student",
+                            "@type" : "ex:Student",
                             "name" : {
                                 "cs" : ["Alena Výbušná"]
                             },
@@ -240,7 +240,7 @@
                     "employs" : [
                         {
                             "@id" : "ex:jiriHrivnak",
-                            "@type" : "Teacher",
+                            "@type" : "ex:Teacher",
                             "name" : {
                                 "cs" : ["doc. Ing. Jiří Hrivnák Ph.D."]
                             },
@@ -268,7 +268,7 @@
                             "isStudiedBy" : [
                                 {
                                     "@id" : "ex:johnDomiesavac",
-                                    "@type" : "Student",
+                                    "@type" : "ex:Student",
                                     "name" : {
                                         "sk" : ["John Domiešavač"]
                                     },
@@ -276,7 +276,7 @@
                                 },
                                 {
                                     "@id" : "ex:josefUridil",
-                                    "@type" : "Student",
+                                    "@type" : "ex:Student",
                                     "name" : {
                                         "cs" : ["Josef Uřídil"]
                                     },
@@ -286,7 +286,7 @@
                             "isTaughtBy" : [
                                 {
                                     "@id" : "ex:janaStikarova",
-                                    "@type" : "Teacher",
+                                    "@type" : "ex:Teacher",
                                     "name" : {
                                         "cs" : ["PhDr. Mgr. Jana Štikarová Ph.D."]
                                     },
@@ -298,7 +298,7 @@
                     "isVisitedBy" : [
                         {
                             "@id" : "ex:johnDomiesavac",
-                            "@type" : "Student",
+                            "@type" : "ex:Student",
                             "name" : {
                                 "sk" : ["John Domiešavač"]
                             },
@@ -306,7 +306,7 @@
                         },
                         {
                             "@id" : "ex:josefUridil",
-                            "@type" : "Student",
+                            "@type" : "ex:Student",
                             "name" : {
                                 "cs" : ["Josef Uřídil"]
                             },
@@ -316,7 +316,7 @@
                     "employs" : [
                         {
                             "@id" : "ex:janaStikarova",
-                            "@type" : "Teacher",
+                            "@type" : "ex:Teacher",
                             "name" : {
                                 "cs" : ["PhDr. Mgr. Jana Štikarová Ph.D."]
                             },
@@ -347,7 +347,7 @@
                     "isVisitedBy" : [
                         {
                             "@id" : "ex:olkeSyba",
-                            "@type" : "Student",
+                            "@type" : "ex:Student",
                             "name" : {
                                 "en" : ["Olke Rene Syba"]
                             },

@@ -1,51 +1,51 @@
 @prefix ns0: <http://example.org/vocabulary/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ns1: <http://purl.org/cerif/frapo/> .
 @prefix ns2: <http://www.w3.org/TR/xmlschema11-2/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://example.org/vocabulary/charlesUniversity>
   a <http://purl.org/cerif/frapo/University> ;
   ns0:hasFaculty ns0:FF ;
   ns0:universityName "Univerzita Karlova"@cs, "Charles University"@en ;
-  ns0:universityWebsite "https://www.cuni.cz"^^xsd:string, "https://www.cuni.cz/uken-1.html"^^xsd:string .
+  ns0:universityWebsite <https://www.cuni.cz>, <https://www.cuni.cz/uken-1.html> .
 
 ns0:FF
   a <http://purl.org/cerif/frapo/Faculty> ;
   ns0:facultyName "Filozofická fakulta"@cs, "Faculty of Arts"@en ;
-  ns0:facultyWebsite "https://www.ff.cuni.cz/"^^xsd:string, "https://www.ff.cuni.cz/en"^^xsd:string .
+  ns0:facultyWebsite <https://www.ff.cuni.cz/>, <https://www.ff.cuni.cz/en> .
 
 ns0:jaroslavMira
   ns0:teachesAt ns0:FF ;
-  a <http://njh.me/Teacher> ;
+  a ns0:Teacher ;
   ns1:hasBirthDate "1968-08-21"^^ns2:date ;
   foaf:name "Mgr. Jaroslav Mira Ph.D."@cs ;
   ns0:teaches ns0:AHE110018 .
 
 ns0:marieSkaropova
   ns0:teachesAt ns0:FF ;
-  a <http://njh.me/Teacher> ;
+  a ns0:Teacher ;
   ns1:hasBirthDate "1957-09-10"^^ns2:date ;
   foaf:name "Mgr. Marie Škaropová Ph.D."@cs ;
   ns0:teaches ns0:ABO600601 .
 
 ns0:karelMatej
   ns0:studiesAt ns0:FF ;
-  a <http://njh.me/Student> ;
+  a ns0:Student ;
   ns1:hasBirthDate "1860-02-21"^^ns2:date ;
   foaf:name "Karel Matej Čech-Chod"@cs ;
   ns0:studies ns0:AHE110018, ns0:ABO600601 .
 
 ns0:petrKopecky
   ns0:studiesAt ns0:FF ;
-  a <http://njh.me/Student> ;
+  a ns0:Student ;
   ns1:hasBirthDate "1969-04-20"^^ns2:date ;
   foaf:name "Petr Kopecký"@cs ;
   ns0:studies ns0:ABO600601 .
 
 ns0:diaLiskova
   ns0:studiesAt ns0:FF ;
-  a <http://njh.me/Student> ;
+  a ns0:Student ;
   ns1:hasBirthDate "2000-05-27"^^ns2:date ;
   foaf:name "Dia Líšková"@cs ;
   ns0:studies ns0:AHE110018 .
@@ -55,11 +55,11 @@ ns0:AHE110018
   a ns0:Course ;
   ns0:courseCode "AHE110018"^^xsd:string ;
   ns0:courseName "Historický vývoj Evropy v komparativní perspektivě"@cs, "Historical Development of Europe in Comparative Perspective"@en ;
-  ns0:courseWebsite "https://is.cuni.cz/studium/predmety/index.php?id=ea629e3e972f695ebb7e4383e410feda&tid=&do=predmet&kod=AHE110018"^^xsd:string .
+  ns0:courseWebsite <https://is.cuni.cz/studium/predmety/index.php?id=ea629e3e972f695ebb7e4383e410feda&tid=&do=predmet&kod=AHE110018> .
 
 ns0:josefUridil
   ns0:studies ns0:AHE110018, ns0:15DPLG ;
-  a <http://njh.me/Student> ;
+  a ns0:Student ;
   ns1:hasBirthDate "1985-11-19"^^ns2:date ;
   foaf:name "Josef Uřídil"@cs ;
   ns0:studiesAt ns0:FD .
@@ -69,29 +69,29 @@ ns0:ABO600601
   a ns0:Course ;
   ns0:courseCode "ABO600601"^^xsd:string ;
   ns0:courseName "Starší česká literatura - přednáška"@cs, "Czech Literature of Older Times - Lecture"@en ;
-  ns0:courseWebsite "https://is.cuni.cz/studium/predmety/index.php?id=ea629e3e972f695ebb7e4383e410feda&tid=&do=predmet&kod=ABO600601"^^xsd:string .
+  ns0:courseWebsite <https://is.cuni.cz/studium/predmety/index.php?id=ea629e3e972f695ebb7e4383e410feda&tid=&do=predmet&kod=ABO600601> .
 
 ns0:czechTechnicalUniversity
   a ns1:University ;
   ns0:hasFaculty ns0:FJFI, ns0:FD ;
   ns0:universityName "České vysoké učení technické v Praze"@cs, "Czech Technical University in Prague"@en ;
-  ns0:universityWebsite "https://www.cvut.cz"^^xsd:string .
+  ns0:universityWebsite <https://www.cvut.cz> .
 
 ns0:FJFI
   a ns1:Faculty ;
   ns0:facultyName "Fakulta jaderná a fyzikálně inženýrská"@cs, "Faculty of Nuclear Sciences and Physical Engineering"@en ;
-  ns0:facultyWebsite "https://www.fjfi.cvut.cz/cz/"^^xsd:string, "https://www.fjfi.cvut.cz/en/"^^xsd:string .
+  ns0:facultyWebsite <https://www.fjfi.cvut.cz/cz/>, <https://www.fjfi.cvut.cz/en/> .
 
 ns0:jiriHrivnak
   ns0:teachesAt ns0:FJFI ;
-  a <http://njh.me/Teacher> ;
+  a ns0:Teacher ;
   ns1:hasBirthDate "1968-08-20"^^ns2:date ;
   foaf:name "doc. Ing. Jiří Hrivnák Ph.D."@cs ;
   ns0:teaches ns0:02ELMA .
 
 ns0:alenaVybusna
   ns0:studiesAt ns0:FJFI ;
-  a <http://njh.me/Student> ;
+  a ns0:Student ;
   ns1:hasBirthDate "1986-04-26"^^ns2:date ;
   foaf:name "Alena Výbušná"@cs ;
   ns0:studies ns0:02ELMA .
@@ -101,23 +101,23 @@ ns0:02ELMA
   a ns0:Course ;
   ns0:courseCode "02ELMA"^^xsd:string ;
   ns0:courseName "Elektřina a magnetismus"@cs ;
-  ns0:courseWebsite "https://bilakniha.cvut.cz/cs/predmet11279205.html#gsc.tab=0"^^xsd:string .
+  ns0:courseWebsite <https://bilakniha.cvut.cz/cs/predmet11279205.html#gsc.tab=0> .
 
 ns0:FD
   a ns1:Faculty ;
   ns0:facultyName "Fakulta dopravní"@cs, "Faculty of Transportation Sciences"@en ;
-  ns0:facultyWebsite "https://www.fd.cvut.cz/cz/"^^xsd:string .
+  ns0:facultyWebsite <https://www.fd.cvut.cz/cz/> .
 
 ns0:janaStikarova
   ns0:teachesAt ns0:FD ;
-  a <http://njh.me/Teacher> ;
+  a ns0:Teacher ;
   ns1:hasBirthDate "1989-01-09"^^ns2:date ;
   foaf:name "PhDr. Mgr. Jana Štikarová Ph.D."@cs ;
   ns0:teaches ns0:15DPLG .
 
 ns0:johnDomiesavac
   ns0:studiesAt ns0:FD ;
-  a <http://njh.me/Student> ;
+  a ns0:Student ;
   ns1:hasBirthDate "1992-04-17"^^ns2:date ;
   foaf:name "John Domiešavač"@sk ;
   ns0:studies ns0:15DPLG .
@@ -127,21 +127,21 @@ ns0:15DPLG
   a ns0:Course ;
   ns0:courseCode "15DPLG"^^xsd:string ;
   ns0:courseName "Dopravní psychologie"@cs ;
-  ns0:courseWebsite "https://www.fd.cvut.cz/studenti/predmet-detail.html?kod=615DPLG"^^xsd:string .
+  ns0:courseWebsite <https://www.fd.cvut.cz/studenti/predmet-detail.html?kod=615DPLG> .
 
 ns0:brnoUniversityOfTechnology
   a ns1:University ;
   ns0:hasFaculty ns0:FIT ;
   ns0:universityName "Vysoké učení technické v Brně"@cs, "Brno University of Technology"@en ;
-  ns0:universityWebsite "https://www.vut.cz"^^xsd:string .
+  ns0:universityWebsite <https://www.vut.cz> .
 
 ns0:FIT
   a ns1:Faculty ;
   ns0:facultyName "Fakulta informačních technologií"@cs, "Faculty of information technology"@en ;
-  ns0:facultyWebsite "https://www.fit.vut.cz/.cs/"^^xsd:string, "https://www.fit.vut.cz/.en/"^^xsd:string .
+  ns0:facultyWebsite <https://www.fit.vut.cz/.cs/>, <https://www.fit.vut.cz/.en/> .
 
 ns0:olkeSyba
   ns0:studiesAt ns0:FIT ;
-  a <http://njh.me/Student> ;
+  a ns0:Student ;
   ns1:hasBirthDate "1899-09-19"^^ns2:date ;
   foaf:name "Olke Rene Syba"@en .
