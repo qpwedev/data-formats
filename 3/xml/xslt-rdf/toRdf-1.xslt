@@ -35,7 +35,7 @@ ex:Teacher a rdfs:Class ;
 ex:universityName a rdf:Property ;
     rdfs:label "Name of the university"@en ;
     rdfs:domain frapo:University ;
-    rdfs:range xsd:langString .
+    rdfs:range rdf:langString .
 ex:universityWebsite a rdf:Property ;
     rdfs:label "Homepage of the university"@en ;
     rdfs:domain frapo:University ;
@@ -45,7 +45,7 @@ ex:universityWebsite a rdf:Property ;
 ex:facultyName a rdf:Property ;
     rdfs:label "Name of the faculty"@en ;
     rdfs:domain frapo:Faculty ;
-    rdfs:range xsd:langString .
+    rdfs:range rdf:langString .
 ex:facultyWebsite a rdf:Property ;
     rdfs:label "Homepage of the faculty"@en ;
     rdfs:domain frapo:Faculty ;
@@ -55,17 +55,17 @@ ex:facultyWebsite a rdf:Property ;
 ex:courseName a rdf:Property ;
     rdfs:label "Name of the course"@en ;
     rdfs:domain crsw:Course ;
-    rdfs:range xsd:langString .
+    rdfs:range rdf:langString .
 ex:courseCode a rdf:Property ; 
     rdfs:label "Code of the course"@en ;
     rdfs:domain crsw:Course ;
-    rdfs:range xsd:langString .
+    rdfs:range xsd:string .
 ex:courseWebsite a rdf:Property ;
     rdfs:label "Homepage of the course"@en ;
     rdfs:domain crsw:Course ;
     rdfs:range foaf:Document .
 
-# RELACTIONS
+# RELATIONS
 # Faculty - University
 ex:hasFaculty a rdf:Property ;
     rdfs:label "University has the faculty"@en ;
@@ -101,7 +101,7 @@ ex:teachesAt a rdf:Property ;
     rdfs:label "Teacher teaches at the faculty"@en ;
     rdfs:domain ex:Teacher ; 
     rdfs:range frapo:Faculty .
-
+    
 # INSTANCES
 # University
 <xsl:for-each select="u:university">
