@@ -739,7 +739,7 @@
                     {
                         "@type" : "Column",
                         "name" : "courseWebsite_uri",
-                        "titles" : "course website",
+                        "titles" : "Course website",
                         "required" : true,
                         "datatype" : "anyURI",
                         "aboutUrl" : "{+course_uri}",
