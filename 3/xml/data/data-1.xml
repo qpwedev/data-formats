@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<u:universities xmlns:u="http://example.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema-1.xsd">
+<u:universities xmlns:u="http://example.org/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://example.org/xsd ../schemas/schema-1.xsd">
     <u:university id="charlesUniversity">
         <u:names>
             <u:name xml:lang="en">Charles University</u:name>
