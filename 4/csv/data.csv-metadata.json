@@ -12,7 +12,7 @@
         {
             "@type" : "Table",
             "@id" : "Person",
-            "url" : "Person.csv",
+            "url" : "data-1.csv",
             "tableSchema" : {
                 "@type" : "Schema",
                 "aboutUrl" : "{+uri}",
@@ -67,7 +67,7 @@
         {
             "@type" : "Table",
             "@id" : "Student",
-            "url" : "Student.csv",
+            "url" : "data-2.csv",
             "tableSchema" : {
                 "@type" : "Schema",
                 "columns" : [
@@ -97,7 +97,7 @@
         {
             "@type" : "Table",
             "@id" : "Teacher",
-            "url" : "Teacher.csv",
+            "url" : "data-3.csv",
             "tableSchema" : {
                 "@type" : "Schema",
                 "columns" : [
@@ -127,7 +127,7 @@
         {
             "@type" : "Table",
             "@id" : "University",
-            "url" : "University.csv",
+            "url" : "data-4.csv",
             "tableSchema" : {
                 "@type" : "Schema",
                 "aboutUrl" : "{+uri}",
@@ -148,7 +148,7 @@
         {
             "@type" : "Table",
             "@id" : "Faculty",
-            "url" : "Faculty.csv",
+            "url" : "data-5.csv",
             "tableSchema" : {
                 "@type" : "Schema",
                 "columns" : [
@@ -188,7 +188,7 @@
         {
             "@type" : "Table",
             "@id" : "Course",
-            "url" : "Course.csv",
+            "url" : "data-6.csv",
             "tableSchema" : {
                 "@type" : "Schema",
                 "aboutUrl" : "{+uri}",
@@ -235,7 +235,7 @@
         {
             "@type" : "Table",
             "@id" : "studiesAt",
-            "url" : "studiesAt.csv",
+            "url" : "data-7.csv",
             "tableSchema" : {
                 "@type" : "Schema",
                 "aboutUrl": "{+student_uri}",
@@ -281,7 +281,7 @@
         {
             "@type" : "Table",
             "@id" : "teachesAt",
-            "url" : "teachesAt.csv",
+            "url" : "data-8.csv",
             "tableSchema" : {
                 "@type" : "Schema",
                 "aboutUrl": "{+teacher_uri}",
@@ -327,7 +327,7 @@
         {
             "@type" : "Table",
             "@id" : "studies",
-            "url" : "studies.csv",
+            "url" : "data-9.csv",
             "tableSchema" : {
                 "@type" : "Schema",
                 "aboutUrl": "{+student_uri}",
@@ -373,7 +373,7 @@
         {
             "@type" : "Table",
             "@id" : "teaches",
-            "url" : "teaches.csv",
+            "url" : "data-10.csv",
             "tableSchema" : {
                 "@type" : "Schema",
                 "aboutUrl": "{+teacher_uri}",
@@ -419,7 +419,7 @@
         {
             "@type" : "Table",
             "@id" : "universityName_cs",
-            "url" : "universityName_cs.csv",
+            "url" : "data-11.csv",
             "tableSchema" : {
                 "@type" : "Schema",
                 "columns" : [
@@ -457,7 +457,7 @@
         {
             "@type" : "Table",
             "@id" : "universityName_en",
-            "url" : "universityName_en.csv",
+            "url" : "data-12.csv",
             "tableSchema" : {
                 "@type" : "Schema",
                 "columns" : [
@@ -496,7 +496,7 @@
         {
             "@type" : "Table",
             "@id" : "universityWebsite",
-            "url" : "universityWebsite.csv",
+            "url" : "data-13.csv",
             "tableSchema" : {
                 "@type" : "Schema",
                 "columns" : [
@@ -534,7 +534,7 @@
         {
             "@type" : "Table",
             "@id" : "facultyName_cs",
-            "url" : "facultyName_cs.csv",
+            "url" : "data-14.csv",
             "tableSchema" : {
                 "@type" : "Schema",
                 "columns" : [
@@ -572,7 +572,7 @@
         {
             "@type" : "Table",
             "@id" : "facultyName_en",
-            "url" : "facultyName_en.csv",
+            "url" : "data-15.csv",
             "tableSchema" : {
                 "@type" : "Schema",
                 "columns" : [
@@ -610,7 +610,7 @@
         {
             "@type" : "Table",
             "@id" : "facultyWebsite",
-            "url" : "facultyWebsite.csv",
+            "url" : "data-16.csv",
             "tableSchema" : {
                 "@type" : "Schema",
                 "columns" : [
@@ -648,7 +648,7 @@
         {
             "@type" : "Table",
             "@id" : "courseName_cs",
-            "url" : "courseName_cs.csv",
+            "url" : "data-17.csv",
             "tableSchema" : {
                 "@type" : "Schema",
                 "columns" : [
@@ -686,7 +686,7 @@
         {
             "@type" : "Table",
             "@id" : "courseName_en",
-            "url" : "courseName_en.csv",
+            "url" : "data-18.csv",
             "tableSchema" : {
                 "@type" : "Schema",
                 "columns" : [
@@ -724,7 +724,7 @@
         {
             "@type" : "Table",
             "@id" : "courseWebsite",
-            "url" : "courseWebsite.csv",
+            "url" : "data-19.csv",
             "tableSchema" : {
                 "@type" : "Schema",
                 "columns" : [
