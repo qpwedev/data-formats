@@ -238,9 +238,6 @@
             "url" : "data-7.csv",
             "tableSchema" : {
                 "@type" : "Schema",
-                "aboutUrl": "{+student_uri}",
-                "propertyUrl" : "http://example.org/vocabulary/studiesAt",
-                "valueUrl" : "{+faculty_uri}",
                 "columns" : [
                     {
                         "@type" : "Column",
@@ -248,7 +245,9 @@
                         "titles" : "Faculty URI",
                         "required" : true,
                         "datatype" : "anyURI",
-                        "suppressOutput" : true
+                        "aboutUrl": "{+student_uri}",
+                        "propertyUrl" : "http://example.org/vocabulary/studiesAt",
+                        "valueUrl" : "{+faculty_uri}"
                     },
                     {
                         "@type" : "Column",
@@ -284,9 +283,6 @@
             "url" : "data-8.csv",
             "tableSchema" : {
                 "@type" : "Schema",
-                "aboutUrl": "{+teacher_uri}",
-                "propertyUrl" : "http://example.org/vocabulary/teachesAt",
-                "valueUrl" : "{+faculty_uri}",
                 "columns" : [
                     {
                         "@type" : "Column",
@@ -294,7 +290,9 @@
                         "titles" : "Faculty URI",
                         "required" : true,
                         "datatype" : "anyURI",
-                        "suppressOutput" : true
+                        "aboutUrl": "{+teacher_uri}",
+                        "propertyUrl" : "http://example.org/vocabulary/teachesAt",
+                        "valueUrl" : "{+faculty_uri}"
                     },
                     {
                         "@type" : "Column",
@@ -330,9 +328,6 @@
             "url" : "data-9.csv",
             "tableSchema" : {
                 "@type" : "Schema",
-                "aboutUrl": "{+student_uri}",
-                "propertyUrl" : "http://example.org/vocabulary/studies",
-                "valueUrl" : "{+course_uri}",
                 "columns" : [
                     {
                         "@type" : "Column",
@@ -340,7 +335,9 @@
                         "titles" : "Course URI",
                         "required" : true,
                         "datatype" : "anyURI",
-                        "suppressOutput" : true
+                        "aboutUrl": "{+student_uri}",
+                        "propertyUrl" : "http://example.org/vocabulary/studies",
+                        "valueUrl" : "{+course_uri}"
                     },
                     {
                         "@type" : "Column",
@@ -376,9 +373,6 @@
             "url" : "data-10.csv",
             "tableSchema" : {
                 "@type" : "Schema",
-                "aboutUrl": "{+teacher_uri}",
-                "propertyUrl" : "http://example.org/vocabulary/teaches",
-                "valueUrl" : "{+course_uri}",
                 "columns" : [
                     {
                         "@type" : "Column",
@@ -386,7 +380,9 @@
                         "titles" : "Course URI",
                         "required" : true,
                         "datatype" : "anyURI",
-                        "suppressOutput" : true
+                        "aboutUrl": "{+teacher_uri}",
+                        "propertyUrl" : "http://example.org/vocabulary/teaches",
+                        "valueUrl" : "{+course_uri}"
                     },
                     {
                         "@type" : "Column",

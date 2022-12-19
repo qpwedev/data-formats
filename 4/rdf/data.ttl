@@ -1,0 +1,142 @@
+@prefix crsw: <http://courseware.rkbexplorer.com/ontologies/courseware/> .
+@prefix ex: <http://example.org/vocabulary/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix frapo: <http://purl.org/cerif/frapo/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:alenaVybusna a ex:Student;
+  ex:studies ex:02ELMA;
+  ex:studiesAt ex:FJFI;
+  frapo:hasBirthDate "1986-04-26"^^xsd:date;
+  foaf:name "Alena Výbušná"@cs .
+
+ex:brnoUniversityOfTechnology a frapo:University;
+  ex:hasFaculty ex:FIT;
+  ex:universityName "Vysoké učení technické v Brně"@cs,
+    "Brno University of Technology"@en;
+  ex:universityWebsite <https://www.vut.cz> .
+
+ex:charlesUniversity a frapo:University;
+  ex:hasFaculty ex:FF;
+  ex:universityName "Univerzita Karlova"@cs,
+    "Charles University"@en;
+  ex:universityWebsite <https://www.cuni.cz>,
+    <https://www.cuni.cz/uken-1.html> .
+
+ex:czechTechnicalUniversity a frapo:University;
+  ex:hasFaculty ex:FJFI,
+    ex:FD;
+  ex:universityName "České vysoké učení technické v Praze"@cs,
+    "Czech Technical University in Prague"@en;
+  ex:universityWebsite <https://www.cvut.cz> .
+
+ex:diaLiskova a ex:Student;
+  ex:studies ex:AHE110018;
+  ex:studiesAt ex:FF;
+  frapo:hasBirthDate "2000-05-27"^^xsd:date;
+  foaf:name "Dia Líšková"@sk .
+
+ex:janaStikarova a ex:Teacher;
+  ex:teaches ex:15DPLG;
+  ex:teachesAt ex:FD;
+  frapo:hasBirthDate "1989-01-09"^^xsd:date;
+  foaf:name "PhDr. Mgr. Jana Štikarová Ph.D."@cs .
+
+ex:jaroslavMira a ex:Teacher;
+  ex:teaches ex:AHE110018;
+  ex:teachesAt ex:FF;
+  frapo:hasBirthDate "1968-08-21"^^xsd:date;
+  foaf:name "Mgr. Jaroslav Mira Ph.D."@cs .
+
+ex:jiriHrivnak a ex:Teacher;
+  ex:teaches ex:02ELMA;
+  ex:teachesAt ex:FJFI;
+  frapo:hasBirthDate "1968-08-20"^^xsd:date;
+  foaf:name "doc. Ing. Jiří Hrivnák Ph.D."@cs .
+
+ex:johnDomiesavac a ex:Student;
+  ex:studies ex:15DPLG;
+  ex:studiesAt ex:FD;
+  frapo:hasBirthDate "1992-04-17"^^xsd:date;
+  foaf:name "John Domiešavač"@sk .
+
+ex:josefUridil a ex:Student;
+  ex:studies ex:15DPLG,
+    ex:AHE110018;
+  ex:studiesAt ex:FD;
+  frapo:hasBirthDate "1985-11-19"^^xsd:date;
+  foaf:name "Josef Uřídil"@cs .
+
+ex:karelMatej a ex:Student;
+  ex:studies ex:AHE110018,
+    ex:ABO600601;
+  ex:studiesAt ex:FF;
+  frapo:hasBirthDate "1860-02-21"^^xsd:date;
+  foaf:name "Karel Matej Čech-Chod"@cs .
+
+ex:marieSkaropova a ex:Teacher;
+  ex:teaches ex:ABO600601;
+  ex:teachesAt ex:FF;
+  frapo:hasBirthDate "1957-09-10"^^xsd:date;
+  foaf:name "Mgr. Marie Škaropová Ph.D."@cs .
+
+ex:olkeSyba a ex:Student;
+  ex:studiesAt ex:FIT;
+  frapo:hasBirthDate "1899-09-19"^^xsd:date;
+  foaf:name "Olke Rene Syba"@en .
+
+ex:petrKopecky a ex:Student;
+  ex:studies ex:ABO600601;
+  ex:studiesAt ex:FF;
+  frapo:hasBirthDate "1969-04-20"^^xsd:date;
+  foaf:name "Petr Kopecký"@cs .
+
+ex:02ELMA a crsw:Course;
+  ex:courseCode "02ELMA";
+  ex:courseName "Elektřina a magnetismus"@cs;
+  ex:courseWebsite <https://bilakniha.cvut.cz/cs/predmet11279205.html#gsc.tab=0>;
+  ex:taughtAt ex:FJFI .
+
+ex:FIT a frapo:Faculty;
+  ex:facultyName "Fakulta informačních technologií"@cs,
+    "Faculty of information technology"@en;
+  ex:facultyWebsite <https://www.fit.vut.cz/.cs/>,
+    <https://www.fit.vut.cz/.en/> .
+
+ex:15DPLG a crsw:Course;
+  ex:courseCode "15DPLG";
+  ex:courseName "Dopravní psychologie"@cs;
+  ex:courseWebsite <https://www.fd.cvut.cz/studenti/predmet-detail.html?kod=615DPLG>;
+  ex:taughtAt ex:FD .
+
+ex:ABO600601 a crsw:Course;
+  ex:courseCode "ABO600601";
+  ex:courseName "Starší česká literatura – přednáška"@cs,
+    "Czech Literature of Older Times – Lecture"@en;
+  ex:courseWebsite <https://is.cuni.cz/studium/predmety/index.php?id=ea629e3e972f695ebb7e4383e410feda&tid=&do=predmet&kod=ABO600601>;
+  ex:taughtAt ex:FF .
+
+ex:AHE110018 a crsw:Course;
+  ex:courseCode "AHE110018";
+  ex:courseName "Historický vývoj Evropy v komparativní perspektivě"@cs,
+    "Historical Development of Europe in Comparative Perspective"@en;
+  ex:courseWebsite <https://is.cuni.cz/studium/predmety/index.php?id=ea629e3e972f695ebb7e4383e410feda&tid=&do=predmet&kod=AHE110018>;
+  ex:taughtAt ex:FF .
+
+ex:FJFI a frapo:Faculty;
+  ex:facultyName "Fakulta jaderná a fyzikálně inženýrská"@cs,
+    "Faculty of Nuclear Sciences and Physical Engineering"@en;
+  ex:facultyWebsite <https://www.fjfi.cvut.cz/cz/>,
+    <https://www.fjfi.cvut.cz/en/> .
+
+ex:FD a frapo:Faculty;
+  ex:facultyName "Fakulta dopravní"@cs,
+    "Faculty of Transportation Sciences"@en;
+  ex:facultyWebsite <https://www.fd.cvut.cz/cz/> .
+
+ex:FF a frapo:Faculty;
+  ex:facultyName "Filozofická fakulta"@cs,
+    "Faculty of Arts"@en;
+  ex:facultyWebsite <https://www.ff.cuni.cz/>,
+    <https://www.ff.cuni.cz/en> .
