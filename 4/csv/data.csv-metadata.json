@@ -3,7 +3,7 @@
         "http://www.w3.org/ns/csvw",
         {
             "@language" : "en",
-            "@base" : "https://example.org/vocabulary/csv/"
+            "@base" : "./"
         }
     ],
     "@type" : "TableGroup",
@@ -57,8 +57,8 @@
                         "name" : "hasBirthDate",
                         "titles" : "Has birth date",
                         "required" : true,
-                        "datatype" : "xsd:date",
-                        "propertyUrl" : "frapo:hasBirthDate"
+                        "datatype" : "date",
+                        "propertyUrl" : "http://purl.org/cerif/frapo/hasBirthDate"
                     }
                 ],
                 "primaryKey" : "uri"
@@ -87,7 +87,7 @@
                     {
                         "columnReference" : "uri",
                         "reference" : {
-                            "resource" : "https://example.org/vocabulary/csv/Person.csv",
+                            "resource" : "data-1.csv",
                             "columnReference" : "uri"
                         }
                     }
@@ -117,7 +117,7 @@
                     {
                         "columnReference" : "uri",
                         "reference" : {
-                            "resource" : "https://example.org/vocabulary/csv/Person.csv",
+                            "resource" : "data-1.csv",
                             "columnReference" : "uri"
                         }
                     }
@@ -139,7 +139,7 @@
                         "required" : true,
                         "datatype" : "anyURI",
                         "propertyUrl" : "rdf:type",
-                        "valueUrl" : "frapo:University"
+                        "valueUrl" : "http://purl.org/cerif/frapo/University"
                     }
                 ],
                 "primaryKey" : "uri"
@@ -160,7 +160,7 @@
                         "datatype" : "anyURI",
                         "aboutUrl" : "{+uri}",
                         "propertyUrl" : "rdf:type",
-                        "valueUrl" : "frapo:Faculty"
+                        "valueUrl" : "http://purl.org/cerif/frapo/Faculty"
                     },
                     {
                         "@type" : "Column",
@@ -169,7 +169,7 @@
                         "required" : true,
                         "datatype" : "anyURI",
                         "aboutUrl" : "{+university_uri}",
-                        "propertyUrl" : "https://example.org/vocabulary/hasFaculty",
+                        "propertyUrl" : "http://example.org/vocabulary/hasFaculty",
                         "valueUrl" : "{+uri}"
                     }
                 ],
@@ -178,7 +178,7 @@
                     {
                         "columnReference" : "university_uri",
                         "reference" : {
-                            "resource" : "https://example.org/vocabulary/csv/University.csv",
+                            "resource" : "data-4.csv",
                             "columnReference" : "uri"
                         }
                     }
@@ -200,7 +200,7 @@
                         "required" : true,
                         "datatype" : "anyURI",
                         "propertyUrl" : "rdf:type",
-                        "valueUrl" : "crsw:Course"
+                        "valueUrl" : "http://courseware.rkbexplorer.com/ontologies/courseware/Course"
                     },
                     {
                         "@type" : "Column",
@@ -208,7 +208,7 @@
                         "titles" : "Course code",
                         "required" : true,
                         "datatype" : "string",
-                        "propertyUrl" : "https://example.org/vocabulary/courseCode"
+                        "propertyUrl" : "http://example.org/vocabulary/courseCode"
                     },
                     {
                         "@type" : "Column",
@@ -216,7 +216,7 @@
                         "titles" : "Faculty URI",
                         "required" : true,
                         "datatype" : "anyURI",
-                        "propertyUrl" : "https://example.org/vocabulary/taughtAt",
+                        "propertyUrl" : "http://example.org/vocabulary/taughtAt",
                         "valueUrl" : "{+faculty_uri}"
                     }
                 ],
@@ -225,7 +225,7 @@
                     {
                         "columnReference" : "faculty_uri",
                         "reference" : {
-                            "resource" : "https://example.org/vocabulary/csv/Faculty.csv",
+                            "resource" : "data-5.csv",
                             "columnReference" : "uri"
                         }
                     }
@@ -239,7 +239,7 @@
             "tableSchema" : {
                 "@type" : "Schema",
                 "aboutUrl": "{+student_uri}",
-                "propertyUrl" : "https://example.org/vocabulary/studiesAt",
+                "propertyUrl" : "http://example.org/vocabulary/studiesAt",
                 "valueUrl" : "{+faculty_uri}",
                 "columns" : [
                     {
@@ -264,14 +264,14 @@
                     {
                         "columnReference" : "faculty_uri",
                         "reference" : {
-                            "resource" : "https://example.org/vocabulary/csv/Faculty.csv",
+                            "resource" : "data-5.csv",
                             "columnReference" : "uri"
                         }
                     },
                     {
                         "columnReference" : "student_uri",
                         "reference" : {
-                            "resource" : "https://example.org/vocabulary/csv/Student.csv",
+                            "resource" : "data-2.csv",
                             "columnReference" : "uri"
                         }
                     }
@@ -285,7 +285,7 @@
             "tableSchema" : {
                 "@type" : "Schema",
                 "aboutUrl": "{+teacher_uri}",
-                "propertyUrl" : "https://example.org/vocabulary/teachesAt",
+                "propertyUrl" : "http://example.org/vocabulary/teachesAt",
                 "valueUrl" : "{+faculty_uri}",
                 "columns" : [
                     {
@@ -310,14 +310,14 @@
                     {
                         "columnReference" : "faculty_uri",
                         "reference" : {
-                            "resource" : "https://example.org/vocabulary/csv/Faculty.csv",
+                            "resource" : "data-5.csv",
                             "columnReference" : "uri"
                         }
                     },
                     {
                         "columnReference" : "teacher_uri",
                         "reference" : {
-                            "resource" : "https://example.org/vocabulary/csv/Teacher.csv",
+                            "resource" : "data-3.csv",
                             "columnReference" : "uri"
                         }
                     }
@@ -331,7 +331,7 @@
             "tableSchema" : {
                 "@type" : "Schema",
                 "aboutUrl": "{+student_uri}",
-                "propertyUrl" : "https://example.org/vocabulary/studies",
+                "propertyUrl" : "http://example.org/vocabulary/studies",
                 "valueUrl" : "{+course_uri}",
                 "columns" : [
                     {
@@ -356,14 +356,14 @@
                     {
                         "columnReference" : "course_uri",
                         "reference" : {
-                            "resource" : "https://example.org/vocabulary/csv/Course.csv",
-                            "columnReference" : ""
+                            "resource" : "data-6.csv",
+                            "columnReference" : "uri"
                         }
                     },
                     {
                         "columnReference" : "student_uri",
                         "reference" : {
-                            "resource" : "https://example.org/vocabulary/csv/Student.csv",
+                            "resource" : "data-2.csv",
                             "columnReference" : "uri"
                         }
                     }
@@ -377,7 +377,7 @@
             "tableSchema" : {
                 "@type" : "Schema",
                 "aboutUrl": "{+teacher_uri}",
-                "propertyUrl" : "https://example.org/vocabulary/teaches",
+                "propertyUrl" : "http://example.org/vocabulary/teaches",
                 "valueUrl" : "{+course_uri}",
                 "columns" : [
                     {
@@ -402,14 +402,14 @@
                     {
                         "columnReference" : "course_uri",
                         "reference" : {
-                            "resource" : "https://example.org/vocabulary/csv/Course.csv",
+                            "resource" : "data-6.csv",
                             "columnReference" : "uri"
                         }
                     },
                     {
                         "columnReference" : "teacher_uri",
                         "reference" : {
-                            "resource" : "https://example.org/vocabulary/csv/Teacher.csv",
+                            "resource" : "data-3.csv",
                             "columnReference" : "uri"
                         }
                     }
@@ -439,7 +439,7 @@
                         "datatype" : "string",
                         "lang" : "cs",
                         "aboutUrl": "{+university_uri}",
-                        "propertyUrl" : "https://example.org/vocabulary/universityName"
+                        "propertyUrl" : "http://example.org/vocabulary/universityName"
                     }
                 ],
                 "primaryKey" : ["university_uri", "universityName"],
@@ -447,7 +447,7 @@
                     {
                         "columnReference" : "university_uri",
                         "reference" : {
-                            "resource" : "https://example.org/vocabulary/csv/University.csv",
+                            "resource" : "data-4.csv",
                             "columnReference" : "uri"
                         }
                     }
@@ -478,7 +478,7 @@
                         "datatype" : "string",
                         "lang" : "en",
                         "aboutUrl": "{+university_uri}",
-                        "propertyUrl" : "https://example.org/vocabulary/universityName"
+                        "propertyUrl" : "http://example.org/vocabulary/universityName"
                     }
                 ],
                 "primaryKey" : ["university_uri", "universityName"],
@@ -486,7 +486,7 @@
                     {
                         "columnReference" : "university_uri",
                         "reference" : {
-                            "resource" : "https://example.org/vocabulary/csv/University.csv",
+                            "resource" : "data-4.csv",
                             "columnReference" : "uri"
                         }
                     }
@@ -515,7 +515,7 @@
                         "required" : true,
                         "datatype" : "anyURI",
                         "aboutUrl": "{+university_uri}",
-                        "propertyUrl" : "https://example.org/vocabulary/universityWebsite",
+                        "propertyUrl" : "http://example.org/vocabulary/universityWebsite",
                         "valueUrl" : "{+universityWebsite_uri}"
                     }
                 ],
@@ -524,7 +524,7 @@
                     {
                         "columnReference" : "university_uri",
                         "reference" : {
-                            "resource" : "https://example.org/vocabulary/csv/University.csv",
+                            "resource" : "data-4.csv",
                             "columnReference" : "uri"
                         }
                     }
@@ -554,7 +554,7 @@
                         "datatype" : "string",
                         "lang" : "cs",
                         "aboutUrl" : "{+faculty_uri}",
-                        "propertyUrl" : "https://example.org/vocabulary/facultyName"
+                        "propertyUrl" : "http://example.org/vocabulary/facultyName"
                     }
                 ],
                 "primaryKey" : ["faculty_uri", "facultyName"],
@@ -562,7 +562,7 @@
                     {
                         "columnReference" : "faculty_uri",
                         "reference" : {
-                            "resource" : "https://example.org/vocabulary/csv/Faculty.csv",
+                            "resource" : "data-5.csv",
                             "columnReference" : "uri"
                         }
                     }
@@ -592,7 +592,7 @@
                         "datatype" : "string",
                         "lang" : "en",
                         "aboutUrl" : "{+faculty_uri}",
-                        "propertyUrl" : "https://example.org/vocabulary/facultyName"
+                        "propertyUrl" : "http://example.org/vocabulary/facultyName"
                     }
                 ],
                 "primaryKey" : ["faculty_uri", "facultyName"],
@@ -600,7 +600,7 @@
                     {
                         "columnReference" : "faculty_uri",
                         "reference" : {
-                            "resource" : "https://example.org/vocabulary/csv/Faculty.csv",
+                            "resource" : "data-5.csv",
                             "columnReference" : "uri"
                         }
                     }
@@ -629,7 +629,7 @@
                         "required" : true,
                         "datatype" : "anyURI",
                         "aboutUrl" : "{+faculty_uri}",
-                        "propertyUrl" : "https://example.org/vocabulary/facultyWebsite",
+                        "propertyUrl" : "http://example.org/vocabulary/facultyWebsite",
                         "valueUrl" : "{+facultyWebsite_uri}"
                     }
                 ],
@@ -638,7 +638,7 @@
                     {
                         "columnReference" : "faculty_uri",
                         "reference" : {
-                            "resource" : "https://example.org/vocabulary/csv/Faculty.csv",
+                            "resource" : "data-5.csv",
                             "columnReference" : "uri"
                         }
                     }
@@ -668,7 +668,7 @@
                         "datatype" : "string",
                         "lang" : "cs",
                         "aboutUrl" : "{+course_uri}",
-                        "propertyUrl" : "https://example.org/vocabulary/courseName"
+                        "propertyUrl" : "http://example.org/vocabulary/courseName"
                     }
                 ],
                 "primaryKey" : ["course_uri", "courseName"],
@@ -676,7 +676,7 @@
                     {
                         "columnReference" : "course_uri",
                         "reference" : {
-                            "resource" : "https://example.org/vocabulary/csv/Course.csv",
+                            "resource" : "data-6.csv",
                             "columnReference" : "uri"
                         }
                     }
@@ -706,7 +706,7 @@
                         "datatype" : "string",
                         "lang" : "en",
                         "aboutUrl" : "{+course_uri}",
-                        "propertyUrl" : "https://example.org/vocabulary/courseName"
+                        "propertyUrl" : "http://example.org/vocabulary/courseName"
                     }
                 ],
                 "primaryKey" : ["course_uri", "courseName"],
@@ -714,7 +714,7 @@
                     {
                         "columnReference" : "course_uri",
                         "reference" : {
-                            "resource" : "https://example.org/vocabulary/csv/Course.csv",
+                            "resource" : "data-6.csv",
                             "columnReference" : "uri"
                         }
                     }
@@ -743,7 +743,7 @@
                         "required" : true,
                         "datatype" : "anyURI",
                         "aboutUrl" : "{+course_uri}",
-                        "propertyUrl" : "https://example.org/vocabulary/courseWebsite",
+                        "propertyUrl" : "http://example.org/vocabulary/courseWebsite",
                         "valueUrl" : "{+courseWebsite_uri}"
                     }
                 ],
@@ -752,7 +752,7 @@
                     {
                         "columnReference" : "course_uri",
                         "reference" : {
-                            "resource" : "https://example.org/vocabulary/csv/Course.csv",
+                            "resource" : "data-6.csv",
                             "columnReference" : "uri"
                         }
                     }
